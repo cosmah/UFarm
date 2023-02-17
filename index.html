@@ -2,46 +2,81 @@
 <html>
   <head>
     <title>My Bootstrap Project</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap/css/bootstrap.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
   </head>
   <body>
     <div class=".container-fluid mt-3">
       <div class="mt-4 p-5 bg-primary text-white rounded">
-        <h1>Welcome To UFarm</h1> 
-        <p>Where urban farmers gather to serve you......</p> 
+        <h1>Welcome To UFarm</h1>
+        <p>Where urban farmers gather to serve you......</p>
       </div>
     </div>
-    
-      
-<div class="container">
-  <h1>My First Bootstrap Page</h1>
-  <p>This part is inside a .container class.</p>
-  <p>The .container class provides a responsive fixed width container.</p>
-  <p>Resize the browser window to see that the container width will change at different breakpoints.</p>
-</div>
 
+    <div class="container">
+      <h1>My First Bootstrap Page</h1>
+      <p>This part is inside a .container class.</p>
+      <p>The .container class provides a responsive fixed width container.</p>
+      <p>
+        Resize the browser window to see that the container width will change at
+        different breakpoints.
+      </p>
+    </div>
 
+    <div class="container">
+      <h1>My First Bootstrap Page</h1>
+      <p>This part is inside a .container class.</p>
+      <p>The .container class provides a responsive fixed width container.</p>
+      <p>
+        Resize the browser window to see that the container width will change at
+        different breakpoints.
+      </p>
+    </div>
+
+    <div class="container">
+      <h1>My First Bootstrap Page</h1>
+      <p>This part is inside a .container class.</p>
+      <p>The .container class provides a responsive fixed width container.</p>
+      <p>
+        Resize the browser window to see that the container width will change at
+        different breakpoints.
+      </p>
+    </div>
+
+    <div class="container">
+      <h1>My First Bootstrap Page</h1>
+      <p>This part is inside a .container class.</p>
+      <p>The .container class provides a responsive fixed width container.</p>
+      <p>
+        Resize the browser window to see that the container width will change at
+        different breakpoints.
+      </p>
+    </div>
 
     <!--#include virtual="footer.html" -->
     <footer>
       <div id="footer-placeholder"></div>
 
-    <script>
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", "/Includes/footer.html"); // modify the URL to reference the Includes directory
-      xhr.onload = function() {
-        if (xhr.status === 200) {
-          document.getElementById("footer-placeholder").innerHTML = xhr.responseText;
-        }
-      };
-      xhr.send();
+      <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "/Includes/footer.html"); // modify the URL to reference the Includes directory
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            document.getElementById("footer-placeholder").innerHTML =
+              xhr.responseText;
+          }
+        };
+        xhr.send();
       </script>
     </footer>
-    
-      
   </body>
 </html>
