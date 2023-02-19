@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My Bootstrap Project</title>
+    <title>UFarm</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -13,60 +13,184 @@
       type="text/css"
     />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="import" href="../includes/navbar.html" />
   </head>
   <body>
-    <div class=".container-fluid mt-3">
-      <div class="mt-4 p-5 bg-primary text-white rounded">
-        <h1>Welcome To UFarm</h1>
-        <p>Where urban farmers gather to serve you......</p>
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="jumbotron my-custom-jumbotron">
+          <h1 class="display-8">UFarm</h1>
+          <p class="lead">Where farmers gather to serve you.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="login text-right"> <!-- added text-right class here -->
+          <br />
+          <br />
+          <a class="btn btn-primary btn-lg" href="#" role="button">LOGIN HERE</a>
+        </div>
+      </div>
+      <hr>
+    </div>
+    
+
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-8">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Pricing</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+         </div>
+        <div class="col-4">
+          <form action="#" class="searchform order-lg-last">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Search</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+
+
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="jumbotron my-custom-jumbotron">
+          <h1 class="display-8">UFarm</h1>
+          <p class="lead">Where farmers gather to serve you.</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="jumbotron my-custom-jumbotron">
+          <h1 class="display-8">Want to join our farmers team?</h1>
+          <form action="#" method="post" onsubmit="return validateForm()" style="margin-left: auto; margin-right: auto; width: 50%;">
+            <div style="margin-bottom: 1em;">
+              <label for="name" style="display: block; margin-bottom: 0.5em;">Name:</label>
+              <input type="text" id="name" name="name" style="display: block; width: 100%; padding: 0.5em;" required>
+            </div>
+          
+            <div style="margin-bottom: 1em;">
+              <label for="ward" style="display: block; margin-bottom: 0.5em;">Ward:</label>
+              <input type="text" id="ward" name="ward" style="display: block; width: 100%; padding: 0.5em;" required>
+            </div>
+          
+            <div style="margin-bottom: 1em;">
+              <label for="contact" style="display: block; margin-bottom: 0.5em;">Contact:</label>
+              <input type="text" id="contact" name="contact" style="display: block; width: 100%; padding: 0.5em;" required>
+            </div>
+          
+            <div style="margin-bottom: 1em;">
+              <label for="email" style="display: block; margin-bottom: 0.5em;">Email:</label>
+              <input type="email" id="email" name="email" style="display: block; width: 100%; padding: 0.5em;" required>
+            </div>
+          
+            <div style="margin-bottom: 1em;">
+              <label for="message" style="display: block; margin-bottom: 0.5em;">Message:</label>
+              <textarea id="message" name="message" style="display: block; width: 100%; padding: 0.5em;" required></textarea>
+            </div>
+          
+            <div style="text-align: center;">
+              <input type="submit" value="Submit" style="padding: 0.5em 1em;">
+            </div>
+          </form>
+          
+          <script>
+            function validateForm() {
+              let name = document.getElementById("name").value;
+              let ward = document.getElementById("ward").value;
+              let contact = document.getElementById("contact").value;
+              let email = document.getElementById("email").value;
+              let message = document.getElementById("message").value;
+          
+              // Check if any field is empty
+              if (name == "" || ward == "" || contact == "" || email == "" || message == "") {
+                alert("Please fill in all fields.");
+                return false;
+              }
+          
+              // Check if email is valid
+              if (!/\S+@\S+\.\S+/.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+              }
+          
+              // Validation passed
+              return true;
+            }
+          </script>
+          
+        </div>
       </div>
     </div>
 
-    <div class="container">
-      <h1>My First Bootstrap Page</h1>
-      <p>This part is inside a .container class.</p>
-      <p>The .container class provides a responsive fixed width container.</p>
-      <p>
-        Resize the browser window to see that the container width will change at
-        different breakpoints.
-      </p>
-    </div>
 
-    <div class="container">
-      <h1>My First Bootstrap Page</h1>
-      <p>This part is inside a .container class.</p>
-      <p>The .container class provides a responsive fixed width container.</p>
-      <p>
-        Resize the browser window to see that the container width will change at
-        different breakpoints.
-      </p>
-    </div>
 
-    <div class="container">
-      <h1>My First Bootstrap Page</h1>
-      <p>This part is inside a .container class.</p>
-      <p>The .container class provides a responsive fixed width container.</p>
-      <p>
-        Resize the browser window to see that the container width will change at
-        different breakpoints.
-      </p>
-    </div>
 
-    <div class="container">
-      <h1>My First Bootstrap Page</h1>
-      <p>This part is inside a .container class.</p>
-      <p>The .container class provides a responsive fixed width container.</p>
-      <p>
-        Resize the browser window to see that the container width will change at
-        different breakpoints.
-      </p>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!--#include virtual="footer.html" -->
     <footer>
       <div id="footer-placeholder"></div>
 
       <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const navbarPlaceholder =
+            document.getElementById("navbar-placeholder");
+          fetch("../Includes/navbar.html")
+            .then((response) => response.text())
+            .then((data) => {
+              navbarPlaceholder.innerHTML = data;
+              const currentLocation = location.href;
+              const navLinks = document.querySelectorAll("#ftco-navbar a");
+              navLinks.forEach((navLink) => {
+                if (navLink.href === currentLocation) {
+                  navLink.classList.add("active");
+                }
+              });
+            });
+        });
         const xhr = new XMLHttpRequest();
         xhr.open("GET", "/Includes/footer.html"); // modify the URL to reference the Includes directory
         xhr.onload = function () {
