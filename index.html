@@ -13,6 +13,8 @@
       type="text/css"
     />
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div class="row">
@@ -38,23 +40,15 @@
     <div class="jumbotron">
       <div class="row">
         <div class="col-8">
-          <nav class="navbar">
-            <div class="navbar-logo">
-              <a href="#">Logo</a>
-            </div>
-            <ul class="navbar-menu">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="product.html">Products</a></li>
-              <li><a href="ordering.html">Bookings</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Contact Us</a></li>
-            </ul>
-            <div class="navbar-toggle">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </nav>
+          <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
         </div>
         <div class="col-4">
           <form action="#" class="searchform order-lg-last">
