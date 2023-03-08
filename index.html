@@ -34,45 +34,55 @@
       </div>
       <div class="col-sm-4">
         <div class="login text-right">
-          <!-- added text-right class here -->
-          <br />
-          <br />
-          <a class="btn btn-primary btn-lg" href="#" role="button"
-            >LOGIN HERE</a
-          >
+          <!--login button-->
         </div>
       </div>
       <hr />
     </div>
 
-    <div class="jumbotron">
-      <div class="row">
-        <div class="col-8">
-          <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="product.html">Products</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-4">
-          <form action="#" class="searchform order-lg-last">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search" />
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">
-                  Search
-                </button>
-              </div>
-            </div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Menu</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">About Us</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
           </form>
         </div>
       </div>
-    </div>
-
+    </nav>
     <div class="container-fluid mt-3">
       <div class="row">
         <div class="col-sm-3 text-white"></div>
@@ -96,48 +106,142 @@
                     <option value="category3">Category 3</option>
                   </select>
                 </div>
-                <ul id="product-list" class="list-group">
-                  <div class="container mt-3">
-                    <h2>Card Image</h2>
-                    <p>Image at the top (card-img-top):</p>
-                    <div class="card" style="width: 400px">
-                      <img
-                        class="card-img-top"
-                        src="../bootstrap4/img_avatar1.png"
-                        alt="Card image"
-                        style="width: 100%"
-                      />
-                      <div class="card-body">
-                        <h4 class="card-title">John Doe</h4>
-                        <p class="card-text">
-                          Some example text some example text. John Doe is an
-                          architect and engineer
-                        </p>
-                        <a href="#" class="btn btn-primary">See Profile</a>
-                      </div>
-                    </div>
-                    <br />
 
-                    <p>Image at the bottom (card-img-bottom):</p>
-                    <div class="card" style="width: 400px">
-                      <div class="card-body">
-                        <h4 class="card-title">Jane Doe</h4>
-                        <p class="card-text">
-                          Some example text some example text. Jane Doe is an
-                          architect and engineer
-                        </p>
-                        <a href="#" class="btn btn-primary">See Profile</a>
-                      </div>
-                      <img
-                        class="card-img-bottom"
-                        src="../bootstrap4/img_avatar6.png"
-                        alt="Card image"
-                        style="width: 100%"
-                      />
+                <div class="row">
+                  <div class="col"><div class="w3-card-4">
+
+                    <header class="w3-container w3-light-grey">
+                      <h3>Product1</h3>
+                    </header>
+                    
+                    <div class="w3-container">
+                      <p>New</p>
+                      <hr>
+                      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+                      <p>Try it............</p>
                     </div>
-                  </div>
-                  <!-- Trending products will be dynamically added here using JavaScript -->
-                </ul>
+                    
+                    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                    
+                    </div></div>
+                  <div class="col"><div class="w3-card-4">
+
+                    <header class="w3-container w3-light-grey">
+                      <h3>Product2</h3>
+                    </header>
+                    
+                    <div class="w3-container">
+                      <p>Tasty</p>
+                      <hr>
+                      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+                      <p>Try it............</p>
+                    </div>
+                    
+                    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                    
+                    </div></div>
+                  <div class="col"><div class="w3-card-4">
+
+                    <header class="w3-container w3-light-grey">
+                      <h3>Product3</h3>
+                    </header>
+                    
+                    <div class="w3-container">
+                      <p>Quality</p>
+                      <hr>
+                      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+                      <p>Try it............</p>
+                    </div>
+                    
+                    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                    
+                    </div></div>
+                  <div class="col"><div class="w3-card-4">
+
+                    <header class="w3-container w3-light-grey">
+                      <h3>Product4</h3>
+                    </header>
+                    
+                    <div class="w3-container">
+                      <p>Great</p>
+                      <hr>
+                      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+                      <p>Try it............</p>
+                    </div>
+                    
+                    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                    
+                    </div></div>
+                </div>
+                  <!--column two-->
+                  <br>
+                <div class="row">
+                  <div class="col"><div class="w3-card-4">
+
+                    <header class="w3-container w3-light-grey">
+                      <h3>Product5</h3>
+                    </header>
+                    
+                    <div class="w3-container">
+                      <p>wow</p>
+                      <hr>
+                      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+                      <p>Try it............</p>
+                    </div>
+                    
+                    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                    
+                    </div></div>
+                  <div class="col"><div class="w3-card-4">
+
+                    <header class="w3-container w3-light-grey">
+                      <h3>Product6</h3>
+                    </header>
+                    
+                    <div class="w3-container">
+                      <p>Hot sale</p>
+                      <hr>
+                      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+                      <p>Try it............</p>
+                    </div>
+                    
+                    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                    
+                    </div></div>
+                  <div class="col"><div class="w3-card-4">
+
+                    <header class="w3-container w3-light-grey">
+                      <h3>Product7</h3>
+                    </header>
+                    
+                    <div class="w3-container">
+                      <p>Awesome</p>
+                      <hr>
+                      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+                      <p>Try it............</p>
+                    </div>
+                    
+                    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                    
+                    </div></div>
+                  <div class="col"><div class="w3-card-4">
+
+                    <header class="w3-container w3-light-grey">
+                      <h3>Product8</h3>
+                    </header>
+                    
+                    <div class="w3-container">
+                      <p>Fresh</p>
+                      <hr>
+                      <img src="img_avatar3.png" alt="Avatar" class="w3-left w3-circle">
+                      <p>Try it............</p>
+                    </div>
+                    
+                    <button class="w3-button w3-block w3-dark-grey">+ Connect</button>
+                    
+                    </div></div>
+                </div>
+                <!-- Trending products will be dynamically added here using JavaScript -->
               </div>
             </div>
           </div>
