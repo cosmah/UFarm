@@ -68,3 +68,23 @@
   margin-right: 16px;
   font-size: 17px;
 }
+
+/*login index*/
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.login-container i {
+  float: right;
+  margin-right: 10px;
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
