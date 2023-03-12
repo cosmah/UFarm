@@ -146,7 +146,8 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="directions">Directions</label>
-            <textarea class="form-control" id="directions" rows="3" placeholder="Enter directions" required></textarea>
+            <input type="text" class="form-control" id="produce-type" placeholder="Enter directions" required>
+            
           </div>
         </div>
         <div class="col-md-6">
@@ -162,8 +163,13 @@
         <div class="col-md-6">
           <div class="form-group">
         <label for="produce-type">Produce Type</label>
-        <input type="text" class="form-control" id="produce-type" placeholder="Enter produce type" required>
-      </div>
+          <select class="form-control" id="produce-type" required>
+            <option value="">Select Produce Type</option>
+            <option value="Fresh Horticulture produce">Fresh Horticulture produce</option>
+            <option value="Poultry products">Poultry products</option>
+            <option value="Dairy products">Dairy products</option>
+          </select>
+          
         </div>
       
       <button type="submit" class="btn btn-primary">Submit</button>

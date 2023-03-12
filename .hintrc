@@ -9,6 +9,12 @@
       {
         "image-alt": "off"
       }
+    ],
+    "axe/parsing": [
+      "default",
+      {
+        "duplicate-id-aria": "off"
+      }
     ]
   }
 }
