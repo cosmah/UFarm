@@ -1,7 +1,6 @@
  Masajja Division Urban Farming Initiative (Ufarm) Information System
- 
- Brief description of the project.
 
+ Brief description of the project.
 
 Introduction
 Ufarm is a program initiated by the Agricultural Officer (AO) to promote and support urban farming practices in four urban wards in Masajja Division. Each urban ward has a designated FarmerOne (FO) appointed by the AO to serve as a contact person for mobilization, supervision, regulation, and support. The program only involves fresh horticulture produce, poultry, and dairy products.

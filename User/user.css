@@ -1,0 +1,85 @@
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+    .container {
+      max-width: 100%;
+      padding: 0 10px;
+    }
+    .header {
+      font-size: 24px;
+    }
+    .product {
+      width: 100%;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    .product-details {
+      font-size: 16px;
+    }
+    .btn {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* General styles */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .header {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .product img {
+    width: 50%;
+    height: auto;
+    margin-right: 20px;
+  }
+  
+  .product-details {
+    width: 50%;
+    font-size: 20px;
+  }
+  
+  .product-details h2 {
+    margin-top: 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #3e8e41;
+  }
+  
