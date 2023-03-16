@@ -26,7 +26,9 @@ Usage
 Provide instructions for using the project, including any relevant screenshots or code examples.
 
 Contributing
-Solo.
+Ssekirya Cosmah Kennedy.
+cosmahke4@gmail.com
++256708153467
 
 License
 Specify the license under which the project is released.
