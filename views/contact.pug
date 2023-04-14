@@ -1,23 +1,213 @@
 doctype html
 head
-  title Bootstrap Example
-  meta(charset='utf-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1')
-  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css')
-  script(src='https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js')
-  script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js')
-  script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js')
-.container
-  h2 Stacked form
-  form(action='/')
-    .form-group
-      label(for='email') Email:
-      input#email.form-control(type='email' placeholder='Enter email' name='email')
-    .form-group
-      label(for='pwd') Password:
-      input#pwd.form-control(type='password' placeholder='Enter password' name='pswd')
-    .form-group.form-check
-      label.form-check-label
-        input.form-check-input(type='checkbox' name='remember')
-        |  Remember me
-    button.btn.btn-primary(type='submit') Submit
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Contact Us
+  // Google Font
+  link(href='https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap' rel='stylesheet')
+  // Css Styles
+  link(rel='stylesheet' href='css/bootstrap.min.css' type='text/css')
+  link(rel='stylesheet' href='css/font-awesome.min.css' type='text/css')
+  link(rel='stylesheet' href='css/elegant-icons.css' type='text/css')
+  link(rel='stylesheet' href='css/nice-select.css' type='text/css')
+  link(rel='stylesheet' href='css/jquery-ui.min.css' type='text/css')
+  link(rel='stylesheet' href='css/owl.carousel.min.css' type='text/css')
+  link(rel='stylesheet' href='css/slicknav.min.css' type='text/css')
+  link(rel='stylesheet' href='css/style.css' type='text/css')
+// Humberger Begin
+.humberger__menu__overlay
+.humberger__menu__wrapper
+  .humberger__menu__logo
+    h1 UFarm
+  .humberger__menu__widget
+    .header__top__right__auth
+      a(href='#')
+        i.fa.fa-user
+        |  Login
+  nav.humberger__menu__nav.mobile-menu
+    ul
+      li.active
+        a(href='./index.html') Home
+      li
+        a(href='./shop-grid.html') Shop
+      li
+        a(href='#') Pages
+        ul.header__menu__dropdown
+          li
+            a(href='./shop-details.html') Shop Details
+          li
+            a(href='./shoping-cart.html') Shoping Cart
+          li
+            a(href='./checkout.html') Check Out
+      li
+        a(href='./contact.html') Contact
+  #mobile-menu-wrap
+// Humberger End
+// Header Section Begin
+header.header
+  .header__top
+    .container
+      .row
+        .col-lg-6
+        .col-lg-6
+          .header__top__right
+            .header__top__right__auth
+              a(href='#')
+                i.fa.fa-user
+                |  Login
+  .container
+    .row
+      .col-lg-3
+        .header__logo
+          h1 UFarm
+      .col-lg-6
+        nav.header__menu
+          ul
+            li
+              a(href='./index.html') Home
+            li
+              a(href='./shop-grid.html') Shop
+            li
+              a(href='#') Pages
+              ul.header__menu__dropdown
+                li
+                  a(href='./shop-details.html') Shop Details
+                li
+                  a(href='./shoping-cart.html') Shoping Cart
+                li
+                  a(href='./checkout.html') Check Out
+            li.active
+              a(href='./contact.html') Contact
+    .humberger__open
+      i.fa.fa-bars
+// Header Section End
+// Hero Section Begin
+section.hero.hero-normal
+  .container
+    .row
+      .col-lg-3
+        .hero__categories
+          .hero__categories__all
+            i.fa.fa-bars
+            span All departments
+          ul
+            li
+              a(href='#') Fresh Meat
+            li
+              a(href='#') Vegetables
+            li
+              a(href='#') Fruit &amp; Nut Gifts
+            li
+              a(href='#') Fresh Berries
+            li
+              a(href='#') Ocean Foods
+            li
+              a(href='#') Butter &amp; Eggs
+            li
+              a(href='#') Fastfood
+            li
+              a(href='#') Fresh Onion
+            li
+              a(href='#') Papayaya &amp; Crisps
+            li
+              a(href='#') Oatmeal
+            li
+              a(href='#') Fresh Bananas
+      .col-lg-9
+        .hero__search
+          .hero__search__form
+            form(action='#')
+              .hero__search__categories
+                | All Categories
+                span.arrow_carrot-down
+              input(type='text' placeholder='What do yo u need?')
+              button.site-btn(type='submit') SEARCH
+          .hero__search__phone
+            .hero__search__phone__icon
+              i.fa.fa-phone
+            .hero__search__phone__text
+              h5 +256 708153467
+              span support 24/7 time
+// Hero Section End
+// Breadcrumb Section Begin
+section.breadcrumb-section.set-bg(data-setbg='img/breadcrumb.jpg')
+  .container
+    .row
+      .col-lg-12.text-center
+        .breadcrumb__text
+          h2 Contact Us
+          .breadcrumb__option
+            a(href='./index.html') Home
+            span Contact Us
+// Breadcrumb Section End
+// Contact Section Begin
+section.contact.spad
+  .container
+    .row
+      .col-lg-3.col-md-3.col-sm-6.text-center
+        .contact__widget
+          span.icon_phone
+          h4 Phone
+          p +256 708153467
+      .col-lg-3.col-md-3.col-sm-6.text-center
+        .contact__widget
+          span.icon_pin_alt
+          h4 Address
+          p Masajja Division
+      .col-lg-3.col-md-3.col-sm-6.text-center
+        .contact__widget
+          span.icon_mail_alt
+          h4 Email
+          p ufarm@gmail.com
+// Contact Section End
+// Contact Form Begin
+.contact-form.spad
+  .container
+    .row
+      .col-lg-12
+        .contact__form__title
+          h2 Leave Message
+    form(action='#')
+      .row
+        .col-lg-6.col-md-6
+          input(type='text' placeholder='Your name')
+        .col-lg-6.col-md-6
+          input(type='text' placeholder='Your Email')
+        .col-lg-12.text-center
+          textarea(placeholder='Your message')
+          button.site-btn(type='submit') SEND MESSAGE
+// Contact Form End
+// Footer Section Begin
+footer.footer.spad
+  .container
+    .row
+      .col-lg-3.col-md-6.col-sm-6
+        .footer__about
+          .footer__about__logo
+            | UFarm
+          ul
+            li Address: Masajja Division, kampala Uganda
+            li Phone: +256708153467
+            li Email: ufarm@hotmail.com
+    .row
+      .col-lg-12
+        .footer__copyright
+          .footer__copyright__text
+            p
+              | Copyright &copy;
+              script.
+                document.write(new Date().getFullYear());
+              |                 All rights reserved | UFarm
+          .footer__copyright__payment
+            img(src='img/payment-item.png' alt='')
+// Footer Section End
+// Js Plugins
+script(src='js/jquery-3.3.1.min.js')
+script(src='js/bootstrap.min.js')
+script(src='js/jquery.nice-select.min.js')
+script(src='js/jquery-ui.min.js')
+script(src='js/jquery.slicknav.js')
+script(src='js/mixitup.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/main.js')

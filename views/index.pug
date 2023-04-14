@@ -1,0 +1,512 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='description' content='Ufarm')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Ufarm
+  // Google Font
+  link(href='https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap' rel='stylesheet')
+  // Css Styles
+  link(rel='stylesheet' href='./landing/css/bootstrap.min.css' type='text/css')
+  link(rel='stylesheet' href='./landing/css/font-awesome.min.css' type='text/css')
+  link(rel='stylesheet' href='./landing/css/elegant-icons.css' type='text/css')
+  link(rel='stylesheet' href='./landing/css/nice-select.css' type='text/css')
+  link(rel='stylesheet' href='./landing/css/jquery-ui.min.css' type='text/css')
+  link(rel='stylesheet' href='./landing/css/owl.carousel.min.css' type='text/css')
+  link(rel='stylesheet' href='./landing/css/slicknav.min.css' type='text/css')
+  link(rel='stylesheet' href='./landing/css/style.css' type='text/css')
+// Humberger Begin
+.humberger__menu__overlay
+.humberger__menu__wrapper
+  .humberger__menu__logo
+    h1 Ufarm
+  .humberger__menu__cart
+    ul
+      li
+        a(href='#')
+          i.fa.fa-heart
+          span 1
+      li
+        a(href='#')
+          i.fa.fa-shopping-bag
+          span 3
+    .header__cart__price
+      | item: 
+      span Ugx.54000/-
+  .humberger__menu__widget
+    .header__top__right__auth
+      a(href='#')
+        i.fa.fa-user
+        |  Login
+  nav.humberger__menu__nav.mobile-menu
+    ul
+      li.active
+        a(href='./index.html') Home
+      li
+        a(href='./shop-grid.html') Shop
+      li
+        a(href='#') Pages
+        ul.header__menu__dropdown
+          li
+            a(href='./shop-details.html') Shop Details
+          li
+            a(href='./shoping-cart.html') Shoping Cart
+          li
+            a(href='./checkout.html') Check Out
+      li
+        a(href='/contact') Contact
+  #mobile-menu-wrap
+  .header__top__right__social
+    a(href='#')
+      i.fa.fa-facebook
+    a(href='#')
+      i.fa.fa-twitter
+    a(href='#')
+      i.fa.fa-linkedin
+    a(href='#')
+      i.fa.fa-pinterest-p
+// Humberger End
+// Header Section Begin
+header.header
+  .header__top
+    .container
+      .row
+        .col-lg-6.col-md-6
+        .col-lg-6.col-md-6
+          .header__top__right
+            .header__top__right__auth
+              a(href='#')
+                i.fa.fa-user
+                |  Login
+  .container
+    .row
+      .col-lg-3
+      .col-lg-6
+        nav.header__menu
+          ul
+            li.active
+              a(href='./index.html') Home
+            li
+              a(href='./landing/shop-grid.html') Shop
+            li
+              a(href='./contact.html') Contact
+      .col-lg-3
+        .header__cart
+          ul
+            li
+              a(href='#')
+                i.fa.fa-heart
+                span 1
+            li
+              a(href='#')
+                i.fa.fa-shopping-bag
+                span 3
+          .header__cart__price
+            | item: 
+            span Ugx.54000/-
+    .humberger__open
+      i.fa.fa-bars
+// Header Section End
+h1 Welcome to UFarm
+// Hero Section Begin
+section.hero
+  .container
+    .row
+      .col-lg-3
+        .hero__categories
+          .hero__categories__all
+            i.fa.fa-bars
+            span All departments
+          ul
+            li
+              a(href='#') Fresh Meat
+            li
+              a(href='#') Vegetables
+            li
+              a(href='#') Fruit &amp; Nut Gifts
+            li
+              a(href='#') Fresh Berries
+            li
+              a(href='#') Ocean Foods
+            li
+              a(href='#') Butter &amp; Eggs
+            li
+              a(href='#') Fastfood
+            li
+              a(href='#') Fresh Onion
+            li
+              a(href='#') Papayaya &amp; Crisps
+            li
+              a(href='#') Oatmeal
+            li
+              a(href='#') Fresh Bananas
+      .col-lg-9
+        .hero__search
+          .hero__search__form
+            form(action='#')
+              .hero__search__categories
+                | All Categories
+                span.arrow_carrot-down
+              input(type='text' placeholder='What do yo u need?')
+              button.site-btn(type='submit') SEARCH
+          .hero__search__phone
+            .hero__search__phone__icon
+              i.fa.fa-phone
+            .hero__search__phone__text
+              h5 +256 708153467
+              span support 24/7 time
+        .hero__item.set-bg(data-setbg='./landing/img/hero/banner.jpg')
+          .hero__text
+            span FRUIT FRESH
+            h2
+              | Vegetable 
+              br
+              | 100% Organic
+            p Free Pickup and Delivery Available
+            a.primary-btn(href='#') SHOP NOW
+// Hero Section End
+// Categories Section Begin
+section.categories
+  .container
+    .row
+      .categories__slider.owl-carousel
+        .col-lg-3
+          .categories__item.set-bg(data-setbg='./landing/img/categories/cat-1.jpg')
+            h5
+              a(href='#') Fresh Fruit
+        .col-lg-3
+          .categories__item.set-bg(data-setbg='./landing/img/categories/cat-2.jpg')
+            h5
+              a(href='#') Dried Fruit
+        .col-lg-3
+          .categories__item.set-bg(data-setbg='./landing/img/categories/cat-3.jpg')
+            h5
+              a(href='#') Vegetables
+        .col-lg-3
+          .categories__item.set-bg(data-setbg='./landing/img/categories/cat-4.jpg')
+            h5
+              a(href='#') drink fruits
+        .col-lg-3
+          .categories__item.set-bg(data-setbg='./landing/img/categories/cat-5.jpg')
+            h5
+              a(href='#') drink fruits
+// Categories Section End
+// Featured Section Begin
+section.featured.spad
+  .container
+    .row
+      .col-lg-12
+        .section-title
+          h2 Featured Product
+        .featured__controls
+          ul
+            li.active(data-filter='*') All
+            li(data-filter='.oranges') Oranges
+            li(data-filter='.fresh-meat') Fresh Meat
+            li(data-filter='.vegetables') Vegetables
+            li(data-filter='.fastfood') Fastfood
+    .row.featured__filter
+      .col-lg-3.col-md-4.col-sm-6.mix.oranges.fresh-meat
+        .featured__item
+          .featured__item__pic.set-bg(data-setbg='./landing/img/featured/feature-1.jpg')
+            ul.featured__item__pic__hover
+              li
+                a(href='#')
+                  i.fa.fa-heart
+              li
+                a(href='#')
+                  i.fa.fa-retweet
+              li
+                a(href='#')
+                  i.fa.fa-shopping-cart
+          .featured__item__text
+            h6
+              a(href='#') Product Name
+            h5 Ugx.20000
+      .col-lg-3.col-md-4.col-sm-6.mix.vegetables.fastfood
+        .featured__item
+          .featured__item__pic.set-bg(data-setbg='./landing/img/featured/feature-2.jpg')
+            ul.featured__item__pic__hover
+              li
+                a(href='#')
+                  i.fa.fa-heart
+              li
+                a(href='#')
+                  i.fa.fa-retweet
+              li
+                a(href='#')
+                  i.fa.fa-shopping-cart
+          .featured__item__text
+            h6
+              a(href='#') Product Name
+            h5 Ugx.15000
+      .col-lg-3.col-md-4.col-sm-6.mix.vegetables.fresh-meat
+        .featured__item
+          .featured__item__pic.set-bg(data-setbg='./landing/img/featured/feature-3.jpg')
+            ul.featured__item__pic__hover
+              li
+                a(href='#')
+                  i.fa.fa-heart
+              li
+                a(href='#')
+                  i.fa.fa-retweet
+              li
+                a(href='#')
+                  i.fa.fa-shopping-cart
+          .featured__item__text
+            h6
+              a(href='#') Product Name
+            h5 Ugx.15000
+      .col-lg-3.col-md-4.col-sm-6.mix.fastfood.oranges
+        .featured__item
+          .featured__item__pic.set-bg(data-setbg='./landing/img/featured/feature-4.jpg')
+            ul.featured__item__pic__hover
+              li
+                a(href='#')
+                  i.fa.fa-heart
+              li
+                a(href='#')
+                  i.fa.fa-retweet
+              li
+                a(href='#')
+                  i.fa.fa-shopping-cart
+          .featured__item__text
+            h6
+              a(href='#') Product Name
+            h5 Ugx.15000
+      .col-lg-3.col-md-4.col-sm-6.mix.fresh-meat.vegetables
+        .featured__item
+          .featured__item__pic.set-bg(data-setbg='./landing/img/featured/feature-5.jpg')
+            ul.featured__item__pic__hover
+              li
+                a(href='#')
+                  i.fa.fa-heart
+              li
+                a(href='#')
+                  i.fa.fa-retweet
+              li
+                a(href='#')
+                  i.fa.fa-shopping-cart
+          .featured__item__text
+            h6
+              a(href='#') Product Name
+            h5 Ugx.15000
+      .col-lg-3.col-md-4.col-sm-6.mix.oranges.fastfood
+        .featured__item
+          .featured__item__pic.set-bg(data-setbg='./landing/img/featured/feature-6.jpg')
+            ul.featured__item__pic__hover
+              li
+                a(href='#')
+                  i.fa.fa-heart
+              li
+                a(href='#')
+                  i.fa.fa-retweet
+              li
+                a(href='#')
+                  i.fa.fa-shopping-cart
+          .featured__item__text
+            h6
+              a(href='#') Product Name
+            h5 Ugx.15000
+      .col-lg-3.col-md-4.col-sm-6.mix.fresh-meat.vegetables
+        .featured__item
+          .featured__item__pic.set-bg(data-setbg='./landing/img/featured/feature-7.jpg')
+            ul.featured__item__pic__hover
+              li
+                a(href='#')
+                  i.fa.fa-heart
+              li
+                a(href='#')
+                  i.fa.fa-retweet
+              li
+                a(href='#')
+                  i.fa.fa-shopping-cart
+          .featured__item__text
+            h6
+              a(href='#') Product Name
+            h5 Ugx.15000
+      .col-lg-3.col-md-4.col-sm-6.mix.fastfood.vegetables
+        .featured__item
+          .featured__item__pic.set-bg(data-setbg='./landing/img/featured/feature-8.jpg')
+            ul.featured__item__pic__hover
+              li
+                a(href='#')
+                  i.fa.fa-heart
+              li
+                a(href='#')
+                  i.fa.fa-retweet
+              li
+                a(href='#')
+                  i.fa.fa-shopping-cart
+          .featured__item__text
+            h6
+              a(href='#') Product Name
+            h5 Ugx.15000
+// Featured Section End
+// Banner Begin
+.banner
+  .container
+    .row
+      .col-lg-6.col-md-6.col-sm-6
+        .banner__pic
+          img(src='./landing/img/banner/banner-1.jpg' alt='')
+      .col-lg-6.col-md-6.col-sm-6
+        .banner__pic
+          img(src='./landing/img/banner/banner-2.jpg' alt='')
+// Banner End
+// Latest Product Section Begin
+section.latest-product.spad
+  .container
+    .row
+      .col-lg-4.col-md-6
+        .latest-product__text
+          h4 Latest Products
+          .latest-product__slider.owl-carousel
+            .latest-prdouct__slider__item
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+            .latest-prdouct__slider__item
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+      .col-lg-4.col-md-6
+        .latest-product__text
+          h4 Top Rated Products
+          .latest-product__slider.owl-carousel
+            .latest-prdouct__slider__item
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+            .latest-prdouct__slider__item
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+      .col-lg-4.col-md-6
+        .latest-product__text
+          h4 Review Products
+          .latest-product__slider.owl-carousel
+            .latest-prdouct__slider__item
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+            .latest-prdouct__slider__item
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+              a.latest-product__item(href='#')
+                .latest-product__item__pic
+                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
+                .latest-product__item__text
+                  h6 Product Name
+                  span Ugx.15000
+// Latest Product Section End
+// Footer Section Begin
+footer.footer.spad
+  .container
+    .row
+    center
+      .row
+        .col-lg-12
+          .footer__copyright
+            .footer__copyright__text
+              p
+                | Copyright &copy;
+                script.
+                  document.write(new Date().getFullYear());
+                |  All rights reserved | Ufarm
+// Footer Section End
+// Js Plugins
+script(src='./landing/js/jquery-3.3.1.min.js')
+script(src='./landing/js/bootstrap.min.js')
+script(src='./landing/js/jquery.nice-select.min.js')
+script(src='./landing/js/jquery-ui.min.js')
+script(src='./landing/js/jquery.slicknav.js')
+script(src='./landing/js/mixitup.min.js')
+script(src='./landing/js/owl.carousel.min.js')
+script(src='./landing/js/main.js')

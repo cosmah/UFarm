@@ -13,10 +13,11 @@ const bodyParser = require('body-parser');
 const config = require("./Config/database")
 
 //import routes
-const employeeRoutes = require("./Routes/ufarmerRoutes")
+const generalRoutes = require("./Routes/generalRoutes")
 const ProductRoute = require("./Routes/ProductRoute")
 const ufarmerRoutes = require("./Routes/ufarmerRoutes")
-const registerRoute = require("./Routes/registerRoute");
+const registerRoute = require("./Routes/registerRoute")
+const authRoutes = require("./Routes/authRoutes");
 
 
 // support parsing of application/json type post data
@@ -57,7 +58,8 @@ app.set(express.static(path.join(__dirname, "public")));
 
 
 // Set up the server
-app.use('/', employeeRoutes);
+app.use('/', generalRoutes);
+app.use('/', authRoutes);
 app.use('/', ufarmerRoutes);
 app.use('/', ProductRoute);
 app.use('/', registerRoute); 
