@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Farmer Registration</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    .abort-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    }
+  </style>
+</head>
+<button class="abort-button" onclick="window.location.href = 'dashboard.html';">Abort</button>
+<div class="container">
+  <h2>Farmer One Registration</h2>
+</div>
+<form id="registration" name="registration" action="/registerfarmerones" method="post">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input class="form-control" id="name" type="text" placeholder="Enter name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="ward">Ward:</label>
+    <input class="form-control" id="ward" type="text" placeholder="Enter ward" name="ward">
+  </div>
+  <div class="form-group">
+    <label for="uniquenumber">FO Unique Number:</label>
+    <input class="form-control" id="unique-number" type="text" placeholder="Enter unique number" name="uniquenumber">
+  </div>
+  <div class="form-group">
+    <label for="registrationdate">Registration Date:</label>
+    <input class="form-control" id="registration-date" type="date" name="registrationdate">
+  </div>
+  <div class="form-group">
+    <label for="gender">Gender:</label>
+    <select class="form-control" id="gender" name="gender">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="dob">Date of Birth:</label>
+    <input class="form-control" id="dob" type="date" name="dob">
+  </div>
+  <div class="form-group">
+    <label for="activities">Activities Engaged In:</label>
+    <input class="form-control" id="activities" type="text" placeholder="Enter activities engaged in" name="activities">
+  </div>
+  <div class="form-group">
+    <label for="nin">National Identification Number:</label>
+    <input class="form-control" id="national-id" type="text" placeholder="Enter national identification number" name="nin">
+  </div>
+  <div class="form-group">
+    <label for="phone">Phone Number:</label>
+    <input class="form-control" id="phone" type="text" placeholder="Enter phone number" name="phone">
+  </div>
+  <div class="form-group">
+    <label for="directions">Directions to Home:</label>
+    <input class="form-control" id="directions" type="text" placeholder="Enter directions to home" name="directions">
+  </div>
+  <div class="form-group">
+    <label for="residence">Residence Type:</label>
+    <select class="form-control" id="residence" name="residence">
+      <option value="Owned">Owned</option>
+      <option value="Rented">Rented</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="residenceperiod">Residence period in years:</label>
+    <input id="residence-period" type="number" name="residenceperiod" min="10">
+  </div>
+  <div class="form-group">
+    <label for="status">Farmer One Status</label>
+    <select class="form-control" id="status" name="status">
+      <option value="active">Active</option>
+      <option value="inactive">Inactive</option>
+    </select>
+  </div><br>
+  <button type="submit">Submit</button>
+</form>

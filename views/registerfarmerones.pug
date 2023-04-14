@@ -1,0 +1,67 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  title Farmer Registration
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+  style.
+    .abort-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    }
+button.abort-button(onclick="window.location.href = 'dashboard.html';") Abort
+.container
+  h2 Farmer One Registration
+form#registration(name='registration' action='/registerfarmerones' method='post')
+    .form-group
+      label(for='name') Name:
+      input#name.form-control(type='text' placeholder='Enter name' name='name')
+    .form-group
+      label(for='ward') Ward:
+      input#ward.form-control(type='text' placeholder='Enter ward' name='ward')
+    .form-group
+      label(for='uniquenumber') FO Unique Number:
+      input#unique-number.form-control(type='text' placeholder='Enter unique number' name='uniquenumber')
+    .form-group
+      label(for='registrationdate') Registration Date:
+      input#registration-date.form-control(type='date' name='registrationdate')
+    .form-group
+      label(for='gender') Gender:
+      select#gender.form-control(name='gender')
+        option(value='Male') Male
+        option(value='Female') Female
+        option(value='Other') Other
+    .form-group
+      label(for='dob') Date of Birth:
+      input#dob.form-control(type='date' name='dob')
+    .form-group
+      label(for='activities') Activities Engaged In:
+      input#activities.form-control(type='text' placeholder='Enter activities engaged in' name='activities')
+    .form-group
+      label(for='nin') National Identification Number:
+      input#national-id.form-control(type='text' placeholder='Enter national identification number' name='nin')
+    .form-group
+      label(for='phone') Phone Number:
+      input#phone.form-control(type='text' placeholder='Enter phone number' name='phone')
+    .form-group
+      label(for='directions') Directions to Home:
+      input#directions.form-control(type='text' placeholder='Enter directions to home' name='directions')
+    .form-group
+      label(for='residence') Residence Type:
+      select#residence.form-control(name='residence')
+        option(value='Owned') Owned
+        option(value='Rented') Rented
+        option(value='Other') Other
+    .form-group
+      label(for='residenceperiod') Residence period in years:
+      input#residence-period(type='number' name='residenceperiod' min='10')
+    .form-group
+      label(for='status') Farmer One Status
+      select#status.form-control(name='status')
+        option(value='active') Active
+        option(value='inactive') Inactive
+    br
+    button(type='submit') Submit

@@ -1,0 +1,20 @@
+{
+  "name": "ufarm",
+  "version": "1.0.0",
+  "description": "Masajja Division Urban Farming Initiative (Ufarm) Information System",
+  "main": "app.js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "cosmah",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^7.0.3",
+    "nodemon": "^2.0.21",
+    "pug": "^3.0.2"
+  }
+}

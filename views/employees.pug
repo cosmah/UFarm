@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head 
+        title Document 
+    body
+        h3 Employees 
+        p.home#child This is pug 
+        div#house more pug 
+        .animal dog
+        #animal cat 
+
+        ul 
+            li 
+                a(href="/") home 
+            li
+                a(href="/about") about 
+            li 
+                a(href="/contact") contact
+        //multiple line paragraph 
+        p   
+            | you are logged in as 
+            | Student user 
+
+            - let employees = ["john", "jane", "jack", "joy", "jade", "jonah"]
+
+            each employee in employees
+                p= employee

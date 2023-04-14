@@ -1,0 +1,1 @@
+{"version":"1.0.0","name":"cosmah","dependencies":{"express":{"version":"4.18.2"},"nodemon":{"version":"2.0.21"},"pug":{"version":"3.0.2"}}}
