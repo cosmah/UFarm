@@ -14,10 +14,12 @@ const config = require("./Config/database")
 
 //import routes
 const generalRoutes = require("./Routes/generalRoutes")
+const loginRoutes = require("./Routes/loginRoutes")
 const ProductRoute = require("./Routes/ProductRoute")
 const ufarmerRoutes = require("./Routes/ufarmerRoutes")
 const registerRoute = require("./Routes/registerRoute")
 const authRoutes = require("./Routes/authRoutes");
+const signupRoutes = require("./Routes/signupRoutes");
 
 
 // support parsing of application/json type post data
@@ -58,6 +60,8 @@ app.set(express.static(path.join(__dirname, "public")));
 
 
 // Set up the server
+app.use('/', signupRoutes);
+app.use('/', loginRoutes);
 app.use('/', generalRoutes);
 app.use('/', authRoutes);
 app.use('/', ufarmerRoutes);

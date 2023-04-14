@@ -23,13 +23,17 @@ var config = require("./Config/database"); //import routes
 
 var generalRoutes = require("./Routes/generalRoutes");
 
+var loginRoutes = require("./Routes/loginRoutes");
+
 var ProductRoute = require("./Routes/ProductRoute");
 
 var ufarmerRoutes = require("./Routes/ufarmerRoutes");
 
 var registerRoute = require("./Routes/registerRoute");
 
-var authRoutes = require("./Routes/authRoutes"); // support parsing of application/json type post data
+var authRoutes = require("./Routes/authRoutes");
+
+var signupRoutes = require("./Routes/signupRoutes"); // support parsing of application/json type post data
 
 
 app.use(bodyParser.json()); //support parsing of application/x-www-form-urlencoded post data
@@ -57,6 +61,8 @@ app.set("views", path.join(__dirname, "views")); //handling public folder(__dirn
 
 app.set(express["static"](path.join(__dirname, "public"))); // Set up the server
 
+app.use('/', signupRoutes);
+app.use('/', loginRoutes);
 app.use('/', generalRoutes);
 app.use('/', authRoutes);
 app.use('/', ufarmerRoutes);
