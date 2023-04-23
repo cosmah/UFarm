@@ -1,0 +1,68 @@
+doctype html
+head
+  title Registered Farmers
+  // Required meta tags
+  meta(charset='utf-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+  // Custom CSS
+  style.
+    /* Add custom styles for the table */
+    .table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+    }
+    .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    }
+    .table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+    }
+    .table-bordered {
+    border: 1px solid #dee2e6;
+    }
+    .table-bordered th,
+    .table-bordered td {
+    border: 1px solid #dee2e6;
+    }
+    .table-bordered thead th,
+    .table-bordered thead td {
+    border-bottom-width: 2px;
+    }
+.container
+  h1 REGISTRED FARMERS LIST
+  table.table.table-bordered
+    thead
+      tr
+        th(scope='col') First Name
+        th(scope='col') Last Name
+        th(scope='col') Email
+        th(scope='col') D.O.B
+        th(scope='col') Contact
+        th(scope='col') Address 
+        th(scope='col') Ward
+        th(scope='col') Action
+        th(scope='col') Activities
+        th(scope='col') Action
+    tbody
+      tr
+        td John
+        td Doe
+        td johndoe@example.com
+        td John
+        td Doe
+        td johndoe@example.com
+        td John
+        td Doe
+        td johndoe@example.com
+        td John
+        td
+          button.btn.btn-primary(type='button') Edit
+          button.btn.btn-warning(type='button') Delete
+
+// Optional JavaScript
+// jQuery first, then Popper.js, then Bootstrap JS

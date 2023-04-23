@@ -25,6 +25,7 @@ const ufarmerRoutes = require("./Routes/ufarmerRoutes")
 const registerRoute = require("./Routes/registerRoute")
 const authRoutes = require("./Routes/authRoutes");
 const signupRoutes = require("./Routes/signupRoutes");
+const farmerOneRouter = require('./Routes/farmerOneRoutes');
 
 //secret is a password for the session, here we dont want the browser to remember our session if broswer is close
 app.use(session({
@@ -70,6 +71,7 @@ app.set("view engine","pug")
 app.set("views", path.join(__dirname,"views"))
 
 
+
 //telling the express module that the public dir has all our site assets
 app.use(express.static(__dirname + '/Public/html'));
 app.use(express.static(__dirname + '/Public/html/landing'));
@@ -92,6 +94,7 @@ app.use('/', authRoutes);
 app.use('/', ufarmerRoutes);
 app.use('/', ProductRoute);
 app.use('/', registerRoute); 
+app.use('/', farmerOneRouter);
 
 //404 message
 app.get("*", (req,res)=>{

@@ -6,20 +6,21 @@ var mongoose = require("mongoose"); //give our schema a name
 
 var farmerSchema = new mongoose.Schema({
   //tell schema what kind of data to expect
-  name: {
+  firstname: {
     type: String,
     trim: true //trim removes blankspace after entering input, INCASE OF PASSWORD VALIDATTION i.e TO VALIDATE A SPACE CHARACTER, DONT USE TRIM
 
   },
-  ward: {
+  lastname: {
     type: String,
     trim: true
   },
-  uniquenumber: {
+  username: {
     type: String,
-    trim: true
+    trim: true,
+    unique: true
   },
-  registrationdate: {
+  dob: {
     type: Date,
     trim: true
   },
@@ -27,11 +28,11 @@ var farmerSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
-  dob: {
-    type: Date,
+  email: {
+    type: String,
     trim: true
   },
-  activities: {
+  phonenumber: {
     type: String,
     trim: true
   },
@@ -39,20 +40,25 @@ var farmerSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
-  phone: {
-    type: String,
-    trim: true
-  },
-  directions: {
-    type: String,
-    trim: true
-  },
   residenceperiod: {
     type: Number,
     trim: true
   },
+  address: {
+    type: String,
+    trim: true
+  },
+  ward: {
+    type: String,
+    trim: true
+  },
   residence: {
     type: String,
+    trim: true
+  },
+  activities: {
+    type: [String],
+    // use square brackets to indicate an array of strings
     trim: true
   }
 });
