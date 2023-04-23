@@ -5,7 +5,12 @@ var express = require('express');
 var router = express.Router();
 
 var Product = require('../Models/productModel'); //import mod3l
-// register urban farmers
+
+
+var multer = require('multer'); // Multer is a middleware for handling multipart/form-data, which is used for uploading files.
+
+
+var path = require('path'); // register urban farmers
 
 
 router.get('/addProducts', function (req, res) {

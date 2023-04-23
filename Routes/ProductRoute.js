@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Product = require('../Models/productModel')//import mod3l
+const multer = require('multer'); // Multer is a middleware for handling multipart/form-data, which is used for uploading files.
+const path = require('path');
 
 // register urban farmers
 router.get('/addProducts', (req, res) => {

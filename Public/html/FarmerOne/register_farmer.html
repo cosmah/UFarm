@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Farmer Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      .abort-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+      }
+    </style>
+    
+</head>
+<body>
+
+  <button class="abort-button" onclick="window.location.href = 'dashboard.html';">Abort</button>
+<div class="container">
+    <h2>Farmers' Registration Form</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="ward">Ward:</label>
+            <input type="text" class="form-control" id="ward" placeholder="Enter ward" name="ward">
+        </div>
+        <div class="form-group">
+            <label for="unique-number">FO Unique Number:</label>
+            <input type="text" class="form-control" id="unique-number" placeholder="Enter unique number" name="unique-number">
+        </div>
+        <div class="form-group">
+            <label for="registration-date">Registration Date:</label>
+            <input type="date" class="form-control" id="registration-date" name="registration-date">
+        </div>
+        <div class="form-group">
+            <label for="gender">Gender:</label>
+            <select class="form-control" id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" class="form-control" id="dob" name="dob">
+        </div>
+        <div class="form-group">
+            <label for="activities">Activities Engaged In:</label>
+            <input type="text" class="form-control" id="activities" placeholder="Enter activities engaged in" name="activities">
+        </div>
+        <div class="form-group">
+            <label for="national-id">National Identification Number:</label>
+            <input type="text" class="form-control" id="national-id" placeholder="Enter national identification number" name="national-id">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="directions">Directions to Home:</label>
+            <input type="text" class="form-control" id="directions" placeholder="Enter directions to home" name="directions">
+        </div>
+        <div class="form-group">
+            <label for="residence">Residence Type:</label>
+            <select class="form-control" id="residence" name="residence">
+                <option value="Owned">Owned</option>
+                <option value="Rented">Rented</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="residence-period">Residence period in years:</label>
+          <input type="number" id="residence-period" name="residence-period" min="10">
+        </div>
+        <div class="form-group">
+            <label for="status">Farmer One Status</label>
+            <select class="form-control" id="status" name="status">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+        
+    </form>
+</div>
+
+</body>
+</html>

@@ -13,19 +13,19 @@ const userSchema = new mongoose.Schema({
         trim:true,
         required:true
     },
-    uniqueid:{
+    username:{
         type:String,
         trim:true,
         required:true,
         unique:true 
     },
-    uniqueid:{
-        type:String,
-        trim:true,
-        required:true 
-    },
+    // uniqueid:{
+    //     type:String,
+    //     trim:true,
+    //     required:true 
+    // },
     dob:{
-        type:String,
+        type:Date,
         trim:true,
         required:true 
     },
@@ -37,7 +37,7 @@ const userSchema = new mongoose.Schema({
     email:{
         type:String,
         trim:true,
-        required:true,
+        // required:true,
         unique:true 
     },
     phonenumber:{
@@ -53,7 +53,6 @@ const userSchema = new mongoose.Schema({
     role:{
         type:String,
         trim:true,
-        required:true 
     },
     address:{
         type:String,
@@ -63,8 +62,9 @@ const userSchema = new mongoose.Schema({
     ward:{
         type:String,
         trim:true,
-        required:true 
+   
     },
+    //for development purpose uncomment
     password:{
         type:String,
         required:true 
@@ -73,5 +73,5 @@ const userSchema = new mongoose.Schema({
 })
 
 
-userSchema.plugin(passportLocalMongoose, {usernameField: "uniqueid"});
+userSchema.plugin(passportLocalMongoose,);
 module.exports = mongoose.model('User', userSchema)

@@ -4,6 +4,8 @@ var express = require('express');
 
 var router = express.Router();
 
+var connectEnsureLogin = require("connect-ensure-login");
+
 var Register = require('../Models/registerModel'); //import mod3l
 //register farmer one
 
@@ -42,9 +44,10 @@ router.post('/registerfarmerones', function _callee(req, res) {
       }
     }
   }, null, null, [[0, 8]]);
-}); //farmer ones page
+}); //to deny access from a non loged user, use connectEnsureLogin method
+//farmer ones page
 
-router.get("/ones", function _callee2(req, res) {
+router.get("/ones", connectEnsureLogin.ensureLoggedIn(), function _callee2(req, res) {
   var items;
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {

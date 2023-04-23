@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const connectEnsureLogin = require("connect-ensure-login")
 const Register = require('../Models/registerModel')//import mod3l
 
 //register farmer one
@@ -25,9 +26,9 @@ router.post('/registerfarmerones', async(req,res)=>{
     }
 })
 
-
+//to deny access from a non loged user, use connectEnsureLogin method
 //farmer ones page
-router.get("/ones", async(req,res)=>{
+router.get("/ones", connectEnsureLogin.ensureLoggedIn(), async(req,res)=>{
     try{
         let items = await Register.find();
         res.render("ones",{ones:items})
