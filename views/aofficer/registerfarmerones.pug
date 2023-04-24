@@ -17,8 +17,11 @@ button.abort-button(onclick="window.location.href = 'dashboard.html';") Abort
   h2 Farmer One Registration
 form#registration(name='registration' action='/registerfarmerones' method='post')
     .form-group
-      label(for='name') Name:
-      input#name.form-control(type='text' placeholder='Enter name' name='name')
+      label(for='name') First Name:
+      input#name.form-control(type='text' placeholder='Enter name' name='firstname')
+    .form-group
+      label(for='name') Last Name:
+      input#name.form-control(type='text' placeholder='Enter name' name='lastname')
     .form-group
       label(for='ward') Ward:
       input#ward.form-control(type='text' placeholder='Enter ward' name='ward')
@@ -27,7 +30,10 @@ form#registration(name='registration' action='/registerfarmerones' method='post'
       input#unique-number.form-control(type='text' placeholder='Enter unique number' name='uniquenumber')
     .form-group
       label(for='registrationdate') Registration Date:
-      input#registration-date.form-control(type='date' name='registrationdate')
+      input#registration-date.form-control(type='date' name='regdate')
+    .form-group
+      label(for='email') User Email:
+      input#registration-date.form-control(type='text' name='email')
     .form-group
       label(for='gender') Gender:
       select#gender.form-control(name='gender')

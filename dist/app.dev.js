@@ -46,7 +46,9 @@ var authRoutes = require("./Routes/authRoutes");
 
 var signupRoutes = require("./Routes/signupRoutes");
 
-var farmerOneRouter = require('./Routes/farmerOneRoutes'); //secret is a password for the session, here we dont want the browser to remember our session if broswer is close
+var farmerOneRouter = require('./Routes/farmerOneRoutes');
+
+var AgricOfficerRouter = require('./Routes/AgricOfficerRoutes'); //secret is a password for the session, here we dont want the browser to remember our session if broswer is close
 
 
 app.use(session({
@@ -101,7 +103,8 @@ app.use('/', authRoutes);
 app.use('/', ufarmerRoutes);
 app.use('/', ProductRoute);
 app.use('/', registerRoute);
-app.use('/', farmerOneRouter); //404 message
+app.use('/', farmerOneRouter);
+app.use('/', AgricOfficerRouter); //404 message
 
 app.get("*", function (req, res) {
   res.status(404).send("Page does not exist");

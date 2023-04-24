@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const connectEnsureLogin = require("connect-ensure-login")
-const Register = require('../Models/registerModel')//import mod3l
+const Farmers = require('../Models/ufarmerModel')//import mod3l
 
 //dashboard
 router.get('/farmerOne/foDash', (req, res) => {
@@ -16,9 +16,9 @@ router.get('/farmerOne/famersRegister', (req, res) => {
 //the action name in the form is the one we use in the post route
 router.post('/registerfarmerones', async(req,res)=>{
   try{
-      const register = new Register(req.body);
+      const register = new Farmers(req.body);
       await register.save()
-      res.redirect('/farmerOne/foDash')//redirect to a path, render a file
+      res.redirect('/farmerOne/urbanFarmers')//redirect to a path, render a file
       console.log(req.body)
   }
   catch(err){
@@ -28,27 +28,24 @@ router.post('/registerfarmerones', async(req,res)=>{
 })
 
 
-router.get('/farmerOne/farmerslist', (req, res) => {
-  res.render('farmerOne/farmerslist');
+router.get('/farmerOne/urbanFarmers', async(req, res) => {
+    try{
+        let items = await Farmers.find();
+        console.log(items)
+        res.render('farmerOne/urbanFarmers',{urbanFarmers:items});
+    }
+    catch{
+      console.log(err)
+      res.send('Operation failed')
+      //res.status(400).render("/")
+    }
 });
 
-//read data 
-router.get("/farmerOne/farmerslist", async(req,res)=>{
-  try{
-      let items = await Farmer.find();//go to our collection 'Register', find every record and store them in a variable items.       
-      console.log(items)
-      res.render("farmerOne/farmerslist",{farmers:items}) 
-  }
-  catch(err){
-      console.log(err)
-      res.send('Failed to retrieve student details')
-  }
-});
 
 // //delete functionality
-// router.post('/students/delete', async(req,res)=>{
+// router.post('/urbanFarmers/delete', async(req,res)=>{
 //   try{
-//       await Register.deleteOne({_id:req.body.id});
+//       await Farmers.deleteOne({_id:req.body.id});
 //       res.redirect('back') //this line keeps us on our operating page
 //   }
 //   catch(err){
@@ -79,8 +76,8 @@ router.get("/farmerOne/farmerslist", async(req,res)=>{
 //   }
 // })
 
-router.get('/farmerOne/foDash', (req, res) => {
-  res.render('farmerOne/foDash');
+router.get('/farmerOne/ufSignUp', (req, res) => {
+  res.render('farmerOne/ufSignUp');
 });
 router.get('/farmerOne/foDash', (req, res) => {
   res.render('farmerOne/foDash');

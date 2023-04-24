@@ -38,6 +38,7 @@ head
   table.table.table-bordered
     thead
       tr
+        th(scope='col') Unique No.
         th(scope='col') First Name
         th(scope='col') Last Name
         th(scope='col') Email
@@ -45,24 +46,37 @@ head
         th(scope='col') Contact
         th(scope='col') Address 
         th(scope='col') Ward
-        th(scope='col') Action
         th(scope='col') Activities
-        th(scope='col') Action
+        //- th(scope='col') Action
     tbody
-      tr
-        td John
-        td Doe
-        td johndoe@example.com
-        td John
-        td Doe
-        td johndoe@example.com
-        td John
-        td Doe
-        td johndoe@example.com
-        td John
-        td
-          button.btn.btn-primary(type='button') Edit
-          button.btn.btn-warning(type='button') Delete
+    tbody
+    //-   if farmerOnes.length 
+    //-     each farmerOne in farmerOnes
+    //-       tr 
+    //-         td #{urbanFarmer.username}
+    //-         td #{urbanFarmer.firstname}
+    //-         td #{urbanFarmer.lastname}
+    //-         td #{urbanFarmer.email}
+    //-         td #{urbanFarmer.dob}
+    //-         td #{urbanFarmer.phonenumber}
+    //-         td #{urbanFarmer.address}
+    //-         td #{urbanFarmer.ward}
+    //-         td #{urbanFarmer.activities}
+            //- td 
+            //-   form(method="post", action="/urbanFarmers/delete")
+            //-     input(type="hidden", name="id", value=farmer.id)
+            //-     button.btn.btn-danger(type="submit") Delete   
+            //- td 
+            //-   //- a.btn.btn-dark.btn-block(href="/farmer/Edit/"+farmer.id) Edit      
+      else 
+        p There are no Farmers in the database
+
+
+
+
+
+
+
 
 // Optional JavaScript
 // jQuery first, then Popper.js, then Bootstrap JS

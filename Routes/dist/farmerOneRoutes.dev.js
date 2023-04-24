@@ -6,7 +6,7 @@ var router = express.Router();
 
 var connectEnsureLogin = require("connect-ensure-login");
 
-var Register = require('../Models/registerModel'); //import mod3l
+var Farmers = require('../Models/ufarmerModel'); //import mod3l
 //dashboard
 
 
@@ -25,12 +25,12 @@ router.post('/registerfarmerones', function _callee(req, res) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
-          register = new Register(req.body);
+          register = new Farmers(req.body);
           _context.next = 4;
           return regeneratorRuntime.awrap(register.save());
 
         case 4:
-          res.redirect('/farmerOne/foDash'); //redirect to a path, render a file
+          res.redirect('/farmerOne/urbanFarmers'); //redirect to a path, render a file
 
           console.log(req.body);
           _context.next = 11;
@@ -48,11 +48,7 @@ router.post('/registerfarmerones', function _callee(req, res) {
     }
   }, null, null, [[0, 8]]);
 });
-router.get('/farmerOne/farmerslist', function (req, res) {
-  res.render('farmerOne/farmerslist');
-}); //read data 
-
-router.get("/farmerOne/farmerslist", function _callee2(req, res) {
+router.get('/farmerOne/urbanFarmers', function _callee2(req, res) {
   var items;
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
@@ -60,14 +56,13 @@ router.get("/farmerOne/farmerslist", function _callee2(req, res) {
         case 0:
           _context2.prev = 0;
           _context2.next = 3;
-          return regeneratorRuntime.awrap(Farmer.find());
+          return regeneratorRuntime.awrap(Farmers.find());
 
         case 3:
           items = _context2.sent;
-          //go to our collection 'Register', find every record and store them in a variable items.       
           console.log(items);
-          res.render("farmerOne/farmerslist", {
-            farmers: items
+          res.render('farmerOne/urbanFarmers', {
+            urbanFarmers: items
           });
           _context2.next = 12;
           break;
@@ -75,8 +70,8 @@ router.get("/farmerOne/farmerslist", function _callee2(req, res) {
         case 8:
           _context2.prev = 8;
           _context2.t0 = _context2["catch"](0);
-          console.log(_context2.t0);
-          res.send('Failed to retrieve student details');
+          console.log(err);
+          res.send('Operation failed'); //res.status(400).render("/")
 
         case 12:
         case "end":
@@ -85,9 +80,9 @@ router.get("/farmerOne/farmerslist", function _callee2(req, res) {
     }
   }, null, null, [[0, 8]]);
 }); // //delete functionality
-// router.post('/students/delete', async(req,res)=>{
+// router.post('/urbanFarmers/delete', async(req,res)=>{
 //   try{
-//       await Register.deleteOne({_id:req.body.id});
+//       await Farmers.deleteOne({_id:req.body.id});
 //       res.redirect('back') //this line keeps us on our operating page
 //   }
 //   catch(err){
@@ -116,8 +111,8 @@ router.get("/farmerOne/farmerslist", function _callee2(req, res) {
 //   }
 // })
 
-router.get('/farmerOne/foDash', function (req, res) {
-  res.render('farmerOne/foDash');
+router.get('/farmerOne/ufSignUp', function (req, res) {
+  res.render('farmerOne/ufSignUp');
 });
 router.get('/farmerOne/foDash', function (req, res) {
   res.render('farmerOne/foDash');

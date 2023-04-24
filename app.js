@@ -26,6 +26,7 @@ const registerRoute = require("./Routes/registerRoute")
 const authRoutes = require("./Routes/authRoutes");
 const signupRoutes = require("./Routes/signupRoutes");
 const farmerOneRouter = require('./Routes/farmerOneRoutes');
+const AgricOfficerRouter = require('./Routes/AgricOfficerRoutes');
 
 //secret is a password for the session, here we dont want the browser to remember our session if broswer is close
 app.use(session({
@@ -95,6 +96,7 @@ app.use('/', ufarmerRoutes);
 app.use('/', ProductRoute);
 app.use('/', registerRoute); 
 app.use('/', farmerOneRouter);
+app.use('/', AgricOfficerRouter);
 
 //404 message
 app.get("*", (req,res)=>{
