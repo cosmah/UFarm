@@ -6,26 +6,34 @@ var router = express.Router();
 
 var connectEnsureLogin = require("connect-ensure-login");
 
-var FO = require('../Models/AgricOfficerModel'); //import mod3l
+var FarmerOne = require('../Models/AgricOfficerModel'); //import model
 //dashboard
 
 
 router.get('/aofficer/aoDash', function (req, res) {
   res.render('aofficer/aoDash');
+}); // GET request to render the registration form
+
+router.get('/aofficer/FoSignUp', function (req, res) {
+  res.render('aofficer/FoSignUp');
 });
-router.get('/aofficer/registerfarmerones', function _callee(req, res) {
+router.get('/aofficer/FoReg', function (req, res) {
+  res.render('aofficer/FoReg');
+}); // POST request to handle the form submission and save data to the database
+
+router.post('/aofficer/FoReg', function _callee(req, res) {
   var register;
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.prev = 0;
-          register = new FO(req.body);
+          register = new FarmerOne(req.body);
           _context.next = 4;
           return regeneratorRuntime.awrap(register.save());
 
         case 4:
-          res.render('aofficer/registerfarmerones');
+          res.render('aofficer/FoReg');
           console.log(req.body);
           _context.next = 11;
           break;
@@ -41,95 +49,38 @@ router.get('/aofficer/registerfarmerones', function _callee(req, res) {
       }
     }
   }, null, null, [[0, 8]]);
-}); // router.get('/aofficer/registerfarmerones', async(req, res) => {
-//     try{
-//         const register = new FO(req.body);
-//         await register.save()
-//         res.render('aofficer/farmerOnes');//redirect to a path, render a file
-//         console.log(req.body)
-//     }
-//     catch(err){
-//         console.log(err)
-//         //res.status(400).render("/")
-//     }
-//   });
-// router.get('/aofficer/farmerOnes', async(req, res) => {
-//     try{
-//         let items = await FO.find();
-//         console.log(items)
-//         res.render('aofficer/farmerOnes',{farmerOnes:items});
-//     }
-//     catch{
-//       console.log(err)
-//       res.send('Operation failed')
-//       //res.status(400).render("/")
-//     }
-// });
-// //famers register
-// router.get('/farmerOne/famersRegister', (req, res) => {
-//   res.render('farmerOne/famersRegister');
-// });
-// //the action name in the form is the one we use in the post route
-// router.post('/registerfarmerones', async(req,res)=>{
-//   try{
-//       const register = new Farmers(req.body);
-//       await register.save()
-//       res.redirect('/farmerOne/urbanFarmers')//redirect to a path, render a file
-//       console.log(req.body)
-//   }
-//   catch(err){
-//       console.log(err)
-//       //res.status(400).render("/")
-//   }
-// })
-// router.get('/farmerOne/urbanFarmers', async(req, res) => {
-//     try{
-//         let items = await Farmers.find();
-//         console.log(items)
-//         res.render('farmerOne/urbanFarmers',{urbanFarmers:items});
-//     }
-//     catch{
-//       console.log(err)
-//       res.send('Operation failed')
-//       //res.status(400).render("/")
-//     }
-// });
-// // //delete functionality
-// // router.post('/urbanFarmers/delete', async(req,res)=>{
-// //   try{
-// //       await Farmers.deleteOne({_id:req.body.id});
-// //       res.redirect('back') //this line keeps us on our operating page
-// //   }
-// //   catch(err){
-// //       console.log(err)
-// //   }
-// // });
-// // //update route
-// // router.get("/studentEdit/:id", async(req,res)=>{
-// //   try{
-// //       const item = await Register.findOne({_id:req.params.id}); //filtering
-// //       res.render("studentEdit", {student:item})
-// //   }
-// //   catch(err){
-// //       res.send("Could not find student");
-// //       console.log(err)
-// //   }
-// // })
-// // router.post("/studentEdit", async(req,res)=>{
-// //   try{
-// //       await Register.findOneAndUpdate({_id:req.query.id},req.body)
-// //       res.redirect("/students")
-// //   }
-// //   catch(err){
-// //       res.send("Failed to update student")
-// //       console.log(err)
-// //   }
-// // })
+}); //fetch the data
 
-router.get('/aofficer/FoSignUp', function (req, res) {
-  res.render('aofficer/FoSignUp');
-});
-router.get('/aofficer/registerfarmerones', function (req, res) {
-  res.render('aofficer/registerfarmerones');
+router.get('/aofficer/farmerOnes', function _callee2(req, res) {
+  var items;
+  return regeneratorRuntime.async(function _callee2$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.prev = 0;
+          _context2.next = 3;
+          return regeneratorRuntime.awrap(Farmers.find());
+
+        case 3:
+          items = _context2.sent;
+          console.log(items);
+          res.render('aofficer/farmerOnes', {
+            farmerOnes: items
+          });
+          _context2.next = 12;
+          break;
+
+        case 8:
+          _context2.prev = 8;
+          _context2.t0 = _context2["catch"](0);
+          console.log(err);
+          res.send('Operation failed'); //res.status(400).render("/")
+
+        case 12:
+        case "end":
+          return _context2.stop();
+      }
+    }
+  }, null, null, [[0, 8]]);
 });
 module.exports = router;

@@ -12,10 +12,10 @@ head
     right: 10px;
     padding: 10px;
     }
-button.abort-button(onclick="window.location.href = 'dashboard.html';") Abort
+button.abort-button(onclick="window.location.href = 'aoDash.html';") Abort
 .container
   h2 Farmer One Registration
-form#registration(name='registration' action='/registerfarmerones' method='post')
+form#farmerOnes(action="") (name='registerfarmerones' action='/registerfarmerones' method='post')
     .form-group
       label(for='name') First Name:
       input#name.form-control(type='text' placeholder='Enter name' name='firstname')

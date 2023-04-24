@@ -41,7 +41,7 @@ var farmeroneSchema = new mongoose.Schema({
     trim: true
   },
   activities: {
-    type: String,
+    type: [String],
     trim: true
   },
   nin: {
@@ -73,4 +73,4 @@ var farmeroneSchema = new mongoose.Schema({
     trim: true
   }
 });
-module.exports = mongoose.model("FO", farmeroneSchema);
+module.exports = mongoose.model("FarmerOne", farmeroneSchema, "farmerones");

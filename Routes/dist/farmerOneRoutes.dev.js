@@ -79,38 +79,7 @@ router.get('/farmerOne/urbanFarmers', function _callee2(req, res) {
       }
     }
   }, null, null, [[0, 8]]);
-}); // //delete functionality
-// router.post('/urbanFarmers/delete', async(req,res)=>{
-//   try{
-//       await Farmers.deleteOne({_id:req.body.id});
-//       res.redirect('back') //this line keeps us on our operating page
-//   }
-//   catch(err){
-//       console.log(err)
-//   }
-// });
-// //update route
-// router.get("/studentEdit/:id", async(req,res)=>{
-//   try{
-//       const item = await Register.findOne({_id:req.params.id}); //filtering
-//       res.render("studentEdit", {student:item})
-//   }
-//   catch(err){
-//       res.send("Could not find student");
-//       console.log(err)
-//   }
-// })
-// router.post("/studentEdit", async(req,res)=>{
-//   try{
-//       await Register.findOneAndUpdate({_id:req.query.id},req.body)
-//       res.redirect("/students")
-//   }
-//   catch(err){
-//       res.send("Failed to update student")
-//       console.log(err)
-//   }
-// })
-
+});
 router.get('/farmerOne/ufSignUp', function (req, res) {
   res.render('farmerOne/ufSignUp');
 });
