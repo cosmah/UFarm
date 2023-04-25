@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<head>
+  <title>Urban Farmer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+    font-family: "Open Sans", sans-serif;
+    }
+  </style>
+</head>
+<!-- Navbar-->
+<div class="w3-top">
+  <div class="w3-bar w3-theme-d2 w3-left-align w3-large"><a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a><a class="w3-bar-item w3-button w3-padding-large w3-theme-d4" href="#"><i class="fa fa-home w3-margin-right"></i>Dashboard</a><a class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" href="../index.html" title="My Account"><img class="w3-circle" src="../assets/lady.png" style="height: 23px; width: 23px" alt="Avatar"></a>
+    <div class="w3-bar w3-black"><a class="w3-bar-item w3-button w3-hide-small" href="#"><i class="fa fa-home"></i> Home</a><a class="w3-bar-item w3-button w3-hide-small" href="#"><i class="fa fa-info-circle"></i> About</a><a class="w3-bar-item w3-button w3-hide-small" href="#"><i class="fa fa-envelope"></i> Contact</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button"><i class="fa fa-product-hunt"></i> Products <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="addProduct"><i class="fa fa-upload"></i> Upload Product</a><a class="w3-bar-item w3-button" href="myproducts.html"><i class="fa fa-list-alt"></i> Product List</a><a class="w3-bar-item w3-button" href="upDateProduct"><i class="fa fa-edit"></i> Update Product</a></div>
+      </div>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button"><i class="fa fa-shopping-cart"></i> Orders <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="./reports/orders.html"><i class="fa fa-check"></i> Check Orders</a></div>
+      </div>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button"><i class="fa fa-users"></i> Customers <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="feedback"><i class="fa fa-comments"></i> Interact with Customers</a></div>
+      </div>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-button"><i class="fa fa-file-text"></i> Reports <i class="fa fa-caret-down"></i></button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="reports/inventory"><i class="fa fa-line-chart"></i> Inventory<i class="fa fa-caret-down"></i></a>
+          <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="addProduct"><i class="fa fa-upload"></i> Upload Product</a><a class="w3-bar-item w3-button" href="myproducts.html"><i class="fa fa-list-alt"></i> Product List</a><a class="w3-bar-item w3-button" href="upDateProduct"><i class="fa fa-edit"></i> Update Product</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Navbar on small screens-->
+<div class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large" id="navDemo"><a class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium w3-large" href="#"><i class="fa fa-bars"></i></a><a class="w3-bar-item w3-button w3-padding-large" href="#"><i class="fa fa-home"></i> Home</a><a class="w3-bar-item w3-button w3-padding-large" href="#"><i class="fa fa-info-circle"></i> About</a><a class="w3-bar-item w3-button w3-padding-large" href="#"><i class="fa fa-envelope"></i> Contact</a>
+  <div class="w3-dropdown-hover w3-padding-large">
+    <button class="w3-button"><i class="fa fa-product-hunt"></i> Products <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="add_products.html"><i class="fa fa-upload"></i> Upload Product</a><a class="w3-bar-item w3-button" href="myproducts.html"><i class="fa fa-list-alt"></i> Product List</a><a class="w3-bar-item w3-button" href="updateInventory.html"><i class="fa fa-edit"></i> Update Product</a></div>
+  </div>
+  <div class="w3-dropdown-hover w3-padding-large">
+    <button class="w3-button"><i class="fa fa-shopping-cart"></i> Orders <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="#"><i class="fa fa-check"></i> Check Orders</a></div>
+  </div>
+  <div class="w3-dropdown-hover w3-padding-large">
+    <button class="w3-button"><i class="fa fa-users"></i> Customers <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="#"><i class="fa fa-comments"></i> Interact with Customers</a></div>
+  </div>
+  <div class="w3-dropdown-hover w3-padding-large">
+    <button class="w3-button"><i class="fa fa-file-text"></i> Reports <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4"><a class="w3-bar-item w3-button" href="#"><i class="fa fa-line-chart"></i> Generate Reports</a></div>
+  </div>
+</div>
+<!-- Page Container-->
+<div class="w3-container w3-content" style="max-width: 1400px; margin-top: 80px">
+  <!-- The Grid-->
+  <div class="w3-row">
+    <!-- Left Column-->
+    <div class="w3-col m3">
+      <!-- Profile-->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+          <h4 class="w3-center">Farmer&apos;s Profile</h4>
+          <p class="w3-center"><img class="w3-circle" src="../assets/farmer.png" style="height: 106px; width: 106px" alt="Avatar"></p>
+          <hr>
+          <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>                Name</p>
+          <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i>                Home Address</p>
+          <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i>                Date of Birth</p>
+          <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-text-theme"></i>                Ward</p>
+          <p><i class="fa fa-id-card fa-fw w3-margin-right w3-text-theme"></i>                NIN</p>
+          <p><i class="fa fa-calendar-plus-o fa-fw w3-margin-right w3-text-theme"></i>                Date of Joining</p>
+          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-text-theme"></i>                Email</p>
+          <p><i class="fa fa-phone fa-fw w3-margin-right w3-text-theme"></i>                Contact</p>
+        </div>
+      </div><br>
+      <!-- Accordion-->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+          <button class="w3-button w3-block w3-theme-l1 w3-left-align" onclick="myFunction('Demo1')"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i> My
+                            Groups
+          </button>
+          <div class="w3-hide w3-container" id="Demo1">
+            <p>Some text..</p>
+          </div>
+          <button class="w3-button w3-block w3-theme-l1 w3-left-align" onclick="myFunction('Demo2')"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> My
+                            Events
+          </button>
+          <div class="w3-hide w3-container" id="Demo2">
+            <p>Some other text..</p>
+          </div>
+        </div>
+      </div><br>
+      <!-- Interests-->
+      <div class="w3-card w3-round w3-white w3-hide-small">
+        <div class="w3-container">
+          <p>Fields Undertaken</p>
+          <p><span class="w3-tag w3-small w3-theme-d5">Fresh Hoticulture Produce</span><span class="w3-tag w3-small w3-theme-d4">Poultry Produce</span><span class="w3-tag w3-small w3-theme-d3">Dairy Produce</span></p>
+        </div>
+      </div><br>
+      <!-- Alert Box-->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small"><span class="w3-button w3-theme-l3 w3-display-topright" onclick="this.parentElement.style.display='none'"><i class="fa fa-remove"></i></span>
+        <p><strong>Hey!</strong></p>
+        <p>People are looking at your profile. Find out who.</p>
+      </div>
+      <!-- End Left Column-->
+    </div>
+    <!-- Middle Column-->
+    <div class="w3-col m7">
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+            <div class="w3-container w3-padding">
+              <h6 class="w3-opacity">ANNOUNCE NEW HARVESTS</h6>
+              <p class="w3-border w3-padding" contenteditable="true">Status: Feeling Blue</p>
+              <button class="w3-button w3-theme" type="button"><i class="fa fa-pencil"></i> &nbsp;Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <center>
+        <h1>NOTIFICATIONS FROM CUSTOMERS</h1>
+      </center>
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br><img class="w3-left w3-circle w3-margin-right" src="../assets/farmer.png" alt="Avatar" style="width: 60px"><span class="w3-right w3-opacity">1 min</span>
+        <h4>John Doe</h4><br>
+        <hr class="w3-clear">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <div class="w3-row-padding" style="margin: 0 -16px">
+          <div class="w3-half"><img class="w3-margin-bottom" src="/w3images/lights.jpg" style="width: 100%" alt="Northern Lights"></div>
+          <div class="w3-half"><img class="w3-margin-bottom" src="/w3images/nature.jpg" style="width: 100%" alt="Nature"></div>
+        </div>
+        <button class="w3-button w3-theme-d1 w3-margin-bottom" type="button"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button>
+        <button class="w3-button w3-theme-d2 w3-margin-bottom" type="button"><i class="fa fa-comment"></i> &nbsp;Comment</button>
+      </div>
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br><img class="w3-left w3-circle w3-margin-right" src="/w3images/avatar5.png" alt="Avatar" style="width: 60px"><span class="w3-right w3-opacity">16 min</span>
+        <h4>Jane Doe</h4><br>
+        <hr class="w3-clear">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <button class="w3-button w3-theme-d1 w3-margin-bottom" type="button"><i class="fa fa-thumbs-up"></i> &nbsp;Like</button>
+        <button class="w3-button w3-theme-d2 w3-margin-bottom" type="button"><i class="fa fa-comment"></i> &nbsp;Comment</button>
+      </div>
+      <!-- End Middle Column-->
+    </div>
+    <!-- Right Column-->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p><img src="../assets/todo.png" alt="Forest" style="width: 100%">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p>
+            <button class="w3-button w3-block w3-theme-l4">Info</button>
+          </p>
+        </div>
+      </div><br>
+      <div class="w3-card w3-round w3-white w3-padding-16 w3-center"><a href="add_products.html">Upload ADS</a></div><br>
+      <div class="w3-card w3-round w3-white w3-padding-32 w3-center">
+        <p><i class="fa fa-bug w3-xxlarge">CONTACT FARMER ONE</i></p>
+      </div>
+      <!-- End Right Column-->
+    </div>
+    <!-- End Grid-->
+  </div>
+  <!-- End Page Container-->
+</div><br>
+<!-- Footer-->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+  <h5>
+    <p>Powered By Ufarm, 2023</p>
+  </h5>
+</footer>
+<footer class="w3-container w3-theme-d5"></footer>
+<script>
+  // Accordion
+  function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+  x.className += " w3-show";
+  x.previousElementSibling.className += " w3-theme-d1";
+  } else {
+  x.className = x.className.replace("w3-show", "");
+  x.previousElementSibling.className =
+  x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+  }
+  // Used to toggle the menu on smaller screens when clicking on the menu button
+  function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+  x.className += " w3-show";
+  } else {
+  x.className = x.className.replace(" w3-show", "");
+  }
+  }
+</script>

@@ -15,6 +15,9 @@ router.get('/aofficer/FoSignUp', (req, res) => {
 router.get('/aofficer/FoReg', (req, res) => {
   res.render('aofficer/FoReg');
 });
+router.get('/aofficer/farmerOnes', (req, res) => {
+  res.render('aofficer/farmerOnes');
+});
 
 // POST request to handle the form submission and save data to the database
 router.post('/aofficer/FoReg', async(req, res) => {
@@ -30,18 +33,16 @@ router.post('/aofficer/FoReg', async(req, res) => {
 });
 
 //fetch the data
-router.get('/aofficer/farmerOnes', async(req, res) => {
+router.get("/aofficer/farmerOnes", async(req,res)=>{
   try{
-      let items = await Farmers.find();
-      console.log(items)
-      res.render('aofficer/farmerOnes',{farmerOnes:items});
+    let items = await FarmerOne.find();
+    console.log(items)
+    res.render("aofficer/farmerOnes",{farmerones:items})
   }
-  catch{
+  catch(err){
     console.log(err)
-    res.send('Operation failed')
-    //res.status(400).render("/")
+    res.send('Failed')
   }
 });
-
 
 module.exports = router;

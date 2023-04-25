@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farmer-Client Interaction</title>
+  <!-- Link to Bootstrap CSS file-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Link to custom CSS file-->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .abort-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    }
+  </style>
+</head>
+<button class="abort-button" onclick="window.location.href = 'ufDash';">Abort</button>
+<div class="container">
+  <h1>Farmer-Client Interaction</h1>
+  <form action="submit.php" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input class="form-control" id="name" type="text" name="name" required="">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input class="form-control" id="email" type="email" name="email" required="">
+    </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea class="form-control" id="message" name="message" rows="5" required=""></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Send Message</button>
+  </form>
+</div>
+<!-- Link to Bootstrap JS file-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

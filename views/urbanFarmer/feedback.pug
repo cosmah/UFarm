@@ -1,0 +1,32 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Farmer-Client Interaction
+  // Link to Bootstrap CSS file
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  // Link to custom CSS file
+  link(rel='stylesheet' href='styles.css')
+  style.
+    .abort-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    }
+button.abort-button(onclick="window.location.href = 'ufDash';") Abort
+.container
+  h1 Farmer-Client Interaction
+  form(action='submit.php' method='POST')
+    .form-group
+      label(for='name') Name:
+      input#name.form-control(type='text' name='name' required='')
+    .form-group
+      label(for='email') Email:
+      input#email.form-control(type='email' name='email' required='')
+    .form-group
+      label(for='message') Message:
+      textarea#message.form-control(name='message' rows='5' required='')
+    button.btn.btn-primary(type='submit') Send Message
+// Link to Bootstrap JS file
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')

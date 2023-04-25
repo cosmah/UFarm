@@ -19,6 +19,9 @@ router.get('/aofficer/FoSignUp', function (req, res) {
 });
 router.get('/aofficer/FoReg', function (req, res) {
   res.render('aofficer/FoReg');
+});
+router.get('/aofficer/farmerOnes', function (req, res) {
+  res.render('aofficer/farmerOnes');
 }); // POST request to handle the form submission and save data to the database
 
 router.post('/aofficer/FoReg', function _callee(req, res) {
@@ -51,7 +54,7 @@ router.post('/aofficer/FoReg', function _callee(req, res) {
   }, null, null, [[0, 8]]);
 }); //fetch the data
 
-router.get('/aofficer/farmerOnes', function _callee2(req, res) {
+router.get("/aofficer/farmerOnes", function _callee2(req, res) {
   var items;
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
@@ -59,13 +62,13 @@ router.get('/aofficer/farmerOnes', function _callee2(req, res) {
         case 0:
           _context2.prev = 0;
           _context2.next = 3;
-          return regeneratorRuntime.awrap(Farmers.find());
+          return regeneratorRuntime.awrap(FarmerOne.find());
 
         case 3:
           items = _context2.sent;
           console.log(items);
-          res.render('aofficer/farmerOnes', {
-            farmerOnes: items
+          res.render("aofficer/farmerOnes", {
+            farmerones: items
           });
           _context2.next = 12;
           break;
@@ -73,8 +76,8 @@ router.get('/aofficer/farmerOnes', function _callee2(req, res) {
         case 8:
           _context2.prev = 8;
           _context2.t0 = _context2["catch"](0);
-          console.log(err);
-          res.send('Operation failed'); //res.status(400).render("/")
+          console.log(_context2.t0);
+          res.send('Failed');
 
         case 12:
         case "end":

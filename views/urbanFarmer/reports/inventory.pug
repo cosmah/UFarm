@@ -1,0 +1,75 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Farmer Inventory
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // Bootstrap CSS
+  link(rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+  // Custom CSS
+  link(rel='stylesheet' type='text/css' href='css/styles.css')
+  style.
+    .abort-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    }
+header
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href='#') Urban Farmers
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarNav.collapse.navbar-collapse
+      ul.navbar-nav
+        li.nav-item.active
+          a.nav-link(href='#') Home
+        li.nav-item
+          a.nav-link(href='#') Orders
+        li.nav-item
+          a.nav-link(href='#') Inventory
+main.container
+  h1 Farmer Inventory
+  table.table.table-striped.table-hover
+    thead
+      tr
+        th Product Name
+        th Product Type
+        th Quantity
+        th Date of Availability
+        th Date of Expiry
+        th Units Sold
+        th Edit
+    tbody
+      tr
+        td Carrots
+        td Vegetable
+        td 10
+        td 2023-03-01
+        td 2023-03-15
+        td 5
+        td
+          a(href='upDateProduct') Edit
+      tr
+        td Tomatoes
+        td Vegetable
+        td 20
+        td 2023-03-05
+        td 2023-03-20
+        td 10
+        td
+          a(href='upDateProduct') Edit
+      tr
+        td Apples
+        td Fruit
+        td 15
+        td 2023-03-10
+        td 2023-03-25
+        td 5
+        td
+          a(href='../upDateProduct') Edit
+  button.add-button Add New Product
+  button.abort-button(onclick="window.location.href = '../ufDash';") Abort
+footer.text-center
+  p &copy; 2023 Urban Farmers. All Rights Reserved.
+//
+  jQuery and Bootstrap JS

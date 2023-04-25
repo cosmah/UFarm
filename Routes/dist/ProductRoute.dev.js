@@ -13,11 +13,11 @@ var multer = require('multer'); // Multer is a middleware for handling multipart
 var path = require('path'); // register urban farmers
 
 
-router.get('/addProducts', function (req, res) {
-  res.render("addProducts");
+router.get('/urbanFarmer/addProduct', function (req, res) {
+  res.render("urbanFarmer/addProduct");
 }); //urban farmers register
 
-router.post('/addProducts', function _callee(req, res) {
+router.post('/urbanFarmer/addProduct', function _callee(req, res) {
   var products;
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
@@ -29,7 +29,7 @@ router.post('/addProducts', function _callee(req, res) {
           return regeneratorRuntime.awrap(products.save());
 
         case 4:
-          res.redirect('/'); //redirect to a path, render a file
+          res.redirect('/urbanFarmer/addProduct'); //redirect to a path, render a file
 
           console.log(req.body);
           _context.next = 11;

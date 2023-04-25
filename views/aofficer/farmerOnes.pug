@@ -1,82 +1,86 @@
 doctype html
-head
-  title Registered Farmers
-  // Required meta tags
-  meta(charset='utf-8')
-  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
-  // Bootstrap CSS
-  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
-  // Custom CSS
-  style.
-    /* Add custom styles for the table */
-    .table {
-    width: 100%;
-    margin-bottom: 1rem;
-    color: #212529;
-    border-collapse: collapse;
-    }
-    .table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #dee2e6;
-    }
-    .table tbody + tbody {
-    border-top: 2px solid #dee2e6;
-    }
-    .table-bordered {
-    border: 1px solid #dee2e6;
-    }
-    .table-bordered th,
-    .table-bordered td {
-    border: 1px solid #dee2e6;
-    }
-    .table-bordered thead th,
-    .table-bordered thead td {
-    border-bottom-width: 2px;
-    }
-.container
-  h1 REGISTRED FARMERS LIST
-  table.table.table-bordered
-    thead
-      tr
-        th(scope='col') Unique No.
-        th(scope='col') First Name
-        th(scope='col') Last Name
-        th(scope='col') Email
-        th(scope='col') D.O.B
-        th(scope='col') Contact
-        th(scope='col') Address 
-        th(scope='col') Ward
-        th(scope='col') Activities
-        //- th(scope='col') Action
-    tbody
-    tbody
-    //-   if farmerOnes.length 
-    //-     each farmerOne in farmerOnes
-    //-       tr 
-    //-         td #{urbanFarmer.username}
-    //-         td #{urbanFarmer.firstname}
-    //-         td #{urbanFarmer.lastname}
-    //-         td #{urbanFarmer.email}
-    //-         td #{urbanFarmer.dob}
-    //-         td #{urbanFarmer.phonenumber}
-    //-         td #{urbanFarmer.address}
-    //-         td #{urbanFarmer.ward}
-    //-         td #{urbanFarmer.activities}
-            //- td 
-            //-   form(method="post", action="/urbanFarmers/delete")
-            //-     input(type="hidden", name="id", value=farmer.id)
-            //-     button.btn.btn-danger(type="submit") Delete   
-            //- td 
-            //-   //- a.btn.btn-dark.btn-block(href="/farmer/Edit/"+farmer.id) Edit      
-      else 
-        p There are no Farmers in the database
+html(lang="en")
+  head
+    title Registered Farmers
+    // Required meta tags
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // Bootstrap CSS
+    link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+    // Custom CSS
+    style.
+      /* Add custom styles for the table */
+      .table {
+        width: 100%;
+        margin-bottom: 1rem;
+        color: #212529;
+        border-collapse: collapse;
+      }
+      .table thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid #dee2e6;
+      }
+      .table tbody + tbody {
+        border-top: 2px solid #dee2e6;
+      }
+      .table-bordered {
+        border: 1px solid #dee2e6;
+      }
+      .table-bordered th,
+      .table-bordered td {
+        border: 1px solid #dee2e6;
+      }
+      .table-bordered thead th,
+      .table-bordered thead td {
+        border-bottom-width: 2px;
+      }
+  body
+    .container
+      h1 REGISTRED FARMERS LIST
+      table.table.table-bordered
+        thead
+          tr
+            th(scope='col') Unique No.
+            th(scope='col') First Name
+            th(scope='col') Last Name
+            th(scope='col') Email
+            th(scope='col') N.I.N 
+            th(scope='col') D.O.B
+            th(scope='col') Gender 
+            th(scope='col') Contact
+            th(scope='col') Address 
+            th(scope='col') Ward
+            th(scope='col') Activities
+            th(scope='col') Status
+            th(scope='col') Action 
+        tbody
+          tr 
+            td hello 
+            td world
+          //- if farmerones.length 
+          //-   each farmerOne in farmerones 
+          //-     tr 
+          //-       td #{farmerOne.uniquenumber}
+          //-       td #{farmerOne.firstname}
+          //-       td #{farmerOne.lastname}
+          //-       td #{farmerOne.email}
+          //-       td #{farmerOne.nin}
+          //-       td #{farmerOne.dob}
+          //-       td #{farmerOne.gender}
+          //-       td #{farmerOne.phone}
+          //-       td #{farmerOne.address}
+          //-       td #{farmerOne.ward}
+          //-       td #{farmerOne.activities}
+          //-       td #{farmerOne.status}
+          //-       //- td 
+          //-       //-   form(method="post", action="/urbanFarmers/delete")
+          //-       //-     input(type="hidden", name="id", value=farmerOne._id)
+          //-       //-     button.btn.btn-danger(type="submit") Delete   
+          //-       //- td 
+          //-       //-   a.btn.btn-dark.btn-block(href=`/urbanFarmers/${farmerOne._id}/edit`) Edit      
+          //- else 
+          //-   p There are no Farmers in the database
 
-
-
-
-
-
-
-
-// Optional JavaScript
-// jQuery first, then Popper.js, then Bootstrap JS
+    // Optional JavaScript
+    // jQuery first, then Popper.js, then Bootstrap JS
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVz

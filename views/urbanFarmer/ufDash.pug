@@ -1,0 +1,323 @@
+doctype html
+head
+  title Urban Farmer
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+  link(rel='stylesheet' href='https://www.w3schools.com/lib/w3-theme-blue-grey.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  style.
+    html,
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+    font-family: "Open Sans", sans-serif;
+    }
+// Navbar
+.w3-top
+  .w3-bar.w3-theme-d2.w3-left-align.w3-large
+    a.w3-bar-item.w3-button.w3-hide-medium.w3-hide-large.w3-right.w3-padding-large.w3-hover-white.w3-large.w3-theme-d2(href='javascript:void(0);' onclick='openNav()')
+      i.fa.fa-bars
+    a.w3-bar-item.w3-button.w3-padding-large.w3-theme-d4(href='#')
+      i.fa.fa-home.w3-margin-right
+      | Dashboard
+    a.w3-bar-item.w3-button.w3-hide-small.w3-right.w3-padding-large.w3-hover-white(href='../index.html' title='My Account')
+      img.w3-circle(src='../assets/lady.png' style='height: 23px; width: 23px' alt='Avatar')
+    .w3-bar.w3-black
+      a.w3-bar-item.w3-button.w3-hide-small(href='#')
+        i.fa.fa-home
+        |  Home
+      a.w3-bar-item.w3-button.w3-hide-small(href='#')
+        i.fa.fa-info-circle
+        |  About
+      a.w3-bar-item.w3-button.w3-hide-small(href='#')
+        i.fa.fa-envelope
+        |  Contact
+      .w3-dropdown-hover.w3-hide-small
+        button.w3-button
+          i.fa.fa-product-hunt
+          |  Products 
+          i.fa.fa-caret-down
+        .w3-dropdown-content.w3-bar-block.w3-card-4
+          a.w3-bar-item.w3-button(href='addProduct')
+            i.fa.fa-upload
+            |  Upload Product
+          a.w3-bar-item.w3-button(href='myproducts.html')
+            i.fa.fa-list-alt
+            |  Product List
+          a.w3-bar-item.w3-button(href='upDateProduct')
+            i.fa.fa-edit
+            |  Update Product
+      .w3-dropdown-hover.w3-hide-small
+        button.w3-button
+          i.fa.fa-shopping-cart
+          |  Orders 
+          i.fa.fa-caret-down
+        .w3-dropdown-content.w3-bar-block.w3-card-4
+          a.w3-bar-item.w3-button(href='./reports/orders.html')
+            i.fa.fa-check
+            |  Check Orders
+      .w3-dropdown-hover.w3-hide-small
+        button.w3-button
+          i.fa.fa-users
+          |  Customers 
+          i.fa.fa-caret-down
+        .w3-dropdown-content.w3-bar-block.w3-card-4
+          a.w3-bar-item.w3-button(href='feedback')
+            i.fa.fa-comments
+            |  Interact with Customers
+      .w3-dropdown-hover.w3-hide-small
+        button.w3-button
+          i.fa.fa-file-text
+          |  Reports 
+          i.fa.fa-caret-down
+        .w3-dropdown-content.w3-bar-block.w3-card-4
+          a.w3-bar-item.w3-button(href='reports/inventory')
+            i.fa.fa-line-chart
+            |  Inventory
+            i.fa.fa-caret-down
+          .w3-dropdown-content.w3-bar-block.w3-card-4
+            a.w3-bar-item.w3-button(href='addProduct')
+              i.fa.fa-upload
+              |  Upload Product
+            a.w3-bar-item.w3-button(href='myproducts.html')
+              i.fa.fa-list-alt
+              |  Product List
+            a.w3-bar-item.w3-button(href='upDateProduct')
+              i.fa.fa-edit
+              |  Update Product
+// Navbar on small screens
+#navDemo.w3-bar-block.w3-theme-d2.w3-hide.w3-hide-large.w3-hide-medium.w3-large
+  a.w3-bar-block.w3-theme-d2.w3-hide.w3-hide-large.w3-hide-medium.w3-large(href='#')
+    i.fa.fa-bars
+  a.w3-bar-item.w3-button.w3-padding-large(href='#')
+    i.fa.fa-home
+    |  Home
+  a.w3-bar-item.w3-button.w3-padding-large(href='#')
+    i.fa.fa-info-circle
+    |  About
+  a.w3-bar-item.w3-button.w3-padding-large(href='#')
+    i.fa.fa-envelope
+    |  Contact
+  .w3-dropdown-hover.w3-padding-large
+    button.w3-button
+      i.fa.fa-product-hunt
+      |  Products 
+      i.fa.fa-caret-down
+    .w3-dropdown-content.w3-bar-block.w3-card-4
+      a.w3-bar-item.w3-button(href='add_products.html')
+        i.fa.fa-upload
+        |  Upload Product
+      a.w3-bar-item.w3-button(href='myproducts.html')
+        i.fa.fa-list-alt
+        |  Product List
+      a.w3-bar-item.w3-button(href='updateInventory.html')
+        i.fa.fa-edit
+        |  Update Product
+  .w3-dropdown-hover.w3-padding-large
+    button.w3-button
+      i.fa.fa-shopping-cart
+      |  Orders 
+      i.fa.fa-caret-down
+    .w3-dropdown-content.w3-bar-block.w3-card-4
+      a.w3-bar-item.w3-button(href='#')
+        i.fa.fa-check
+        |  Check Orders
+  .w3-dropdown-hover.w3-padding-large
+    button.w3-button
+      i.fa.fa-users
+      |  Customers 
+      i.fa.fa-caret-down
+    .w3-dropdown-content.w3-bar-block.w3-card-4
+      a.w3-bar-item.w3-button(href='#')
+        i.fa.fa-comments
+        |  Interact with Customers
+  .w3-dropdown-hover.w3-padding-large
+    button.w3-button
+      i.fa.fa-file-text
+      |  Reports 
+      i.fa.fa-caret-down
+    .w3-dropdown-content.w3-bar-block.w3-card-4
+      a.w3-bar-item.w3-button(href='#')
+        i.fa.fa-line-chart
+        |  Generate Reports
+// Page Container
+.w3-container.w3-content(style='max-width: 1400px; margin-top: 80px')
+  // The Grid
+  .w3-row
+    // Left Column
+    .w3-col.m3
+      // Profile
+      .w3-card.w3-round.w3-white
+        .w3-container
+          h4.w3-center Farmer&apos;s Profile
+          p.w3-center
+            img.w3-circle(src='../assets/farmer.png' style='height: 106px; width: 106px' alt='Avatar')
+          hr
+          p
+            i.fa.fa-pencil.fa-fw.w3-margin-right.w3-text-theme
+            |                 Name
+          p
+            i.fa.fa-home.fa-fw.w3-margin-right.w3-text-theme
+            |                 Home Address
+          p
+            i.fa.fa-birthday-cake.fa-fw.w3-margin-right.w3-text-theme
+            |                 Date of Birth
+          p
+            i.fa.fa-map-marker.fa-fw.w3-margin-right.w3-text-theme
+            |                 Ward
+          p
+            i.fa.fa-id-card.fa-fw.w3-margin-right.w3-text-theme
+            |                 NIN
+          p
+            i.fa.fa-calendar-plus-o.fa-fw.w3-margin-right.w3-text-theme
+            |                 Date of Joining
+          p
+            i.fa.fa-envelope.fa-fw.w3-margin-right.w3-text-theme
+            |                 Email
+          p
+            i.fa.fa-phone.fa-fw.w3-margin-right.w3-text-theme
+            |                 Contact
+      br
+      // Accordion
+      .w3-card.w3-round
+        .w3-white
+          button.w3-button.w3-block.w3-theme-l1.w3-left-align(onclick="myFunction('Demo1')")
+            i.fa.fa-circle-o-notch.fa-fw.w3-margin-right
+            |  My
+            |                 Groups
+          #Demo1.w3-hide.w3-container
+            p Some text..
+          button.w3-button.w3-block.w3-theme-l1.w3-left-align(onclick="myFunction('Demo2')")
+            i.fa.fa-calendar-check-o.fa-fw.w3-margin-right
+            |  My
+            |                 Events
+          #Demo2.w3-hide.w3-container
+            p Some other text..
+      br
+      // Interests
+      .w3-card.w3-round.w3-white.w3-hide-small
+        .w3-container
+          p Fields Undertaken
+          p
+            span.w3-tag.w3-small.w3-theme-d5 Fresh Hoticulture Produce
+            span.w3-tag.w3-small.w3-theme-d4 Poultry Produce
+            span.w3-tag.w3-small.w3-theme-d3 Dairy Produce
+      br
+      // Alert Box
+      .w3-container.w3-display-container.w3-round.w3-theme-l4.w3-border.w3-theme-border.w3-margin-bottom.w3-hide-small
+        span.w3-button.w3-theme-l3.w3-display-topright(onclick="this.parentElement.style.display='none'")
+          i.fa.fa-remove
+        p
+          strong Hey!
+        p People are looking at your profile. Find out who.
+      // End Left Column
+    // Middle Column
+    .w3-col.m7
+      .w3-row-padding
+        .w3-col.m12
+          .w3-card.w3-round.w3-white
+            .w3-container.w3-padding
+              h6.w3-opacity ANNOUNCE NEW HARVESTS
+              p.w3-border.w3-padding(contenteditable='true')
+                | Status: Feeling Blue
+              button.w3-button.w3-theme(type='button')
+                i.fa.fa-pencil
+                |  &nbsp;Post
+      center
+        h1 NOTIFICATIONS FROM CUSTOMERS
+      .w3-container.w3-card.w3-white.w3-round.w3-margin
+        br
+        img.w3-left.w3-circle.w3-margin-right(src='../assets/farmer.png' alt='Avatar' style='width: 60px')
+        span.w3-right.w3-opacity 1 min
+        h4 John Doe
+        br
+        hr.w3-clear
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          | enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          | nisi ut aliquip ex ea commodo consequat.
+        .w3-row-padding(style='margin: 0 -16px')
+          .w3-half
+            img.w3-margin-bottom(src='/w3images/lights.jpg' style='width: 100%' alt='Northern Lights')
+          .w3-half
+            img.w3-margin-bottom(src='/w3images/nature.jpg' style='width: 100%' alt='Nature')
+        button.w3-button.w3-theme-d1.w3-margin-bottom(type='button')
+          i.fa.fa-thumbs-up
+          |  &nbsp;Like
+        button.w3-button.w3-theme-d2.w3-margin-bottom(type='button')
+          i.fa.fa-comment
+          |  &nbsp;Comment
+      .w3-container.w3-card.w3-white.w3-round.w3-margin
+        br
+        img.w3-left.w3-circle.w3-margin-right(src='/w3images/avatar5.png' alt='Avatar' style='width: 60px')
+        span.w3-right.w3-opacity 16 min
+        h4 Jane Doe
+        br
+        hr.w3-clear
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+          | enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          | nisi ut aliquip ex ea commodo consequat.
+        button.w3-button.w3-theme-d1.w3-margin-bottom(type='button')
+          i.fa.fa-thumbs-up
+          |  &nbsp;Like
+        button.w3-button.w3-theme-d2.w3-margin-bottom(type='button')
+          i.fa.fa-comment
+          |  &nbsp;Comment
+      // End Middle Column
+    // Right Column
+    .w3-col.m2
+      .w3-card.w3-round.w3-white.w3-center
+        .w3-container
+          p Upcoming Events:
+          img(src='../assets/todo.png' alt='Forest' style='width: 100%')
+          p
+            strong Holiday
+          p Friday 15:00
+          p
+            button.w3-button.w3-block.w3-theme-l4 Info
+      br
+      .w3-card.w3-round.w3-white.w3-padding-16.w3-center
+        a(href='add_products.html') Upload ADS
+      br
+      .w3-card.w3-round.w3-white.w3-padding-32.w3-center
+        p
+          i.fa.fa-bug.w3-xxlarge CONTACT FARMER ONE
+      // End Right Column
+    // End Grid
+  // End Page Container
+br
+// Footer
+footer.w3-container.w3-theme-d3.w3-padding-16
+  h5
+    p Powered By Ufarm, 2023
+footer.w3-container.w3-theme-d5
+script.
+  // Accordion
+  function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+  x.className += " w3-show";
+  x.previousElementSibling.className += " w3-theme-d1";
+  } else {
+  x.className = x.className.replace("w3-show", "");
+  x.previousElementSibling.className =
+  x.previousElementSibling.className.replace(" w3-theme-d1", "");
+  }
+  }
+  // Used to toggle the menu on smaller screens when clicking on the menu button
+  function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+  x.className += " w3-show";
+  } else {
+  x.className = x.className.replace(" w3-show", "");
+  }
+  }

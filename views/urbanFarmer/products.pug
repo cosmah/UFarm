@@ -1,0 +1,50 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Products List
+  // Bootstrap CSS
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css')
+  // Custom CSS
+  style.
+    .abort-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    }
+    body {
+    padding: 0px;
+    width: 100%;
+    }
+button.abort-button(onclick="window.location.href = 'ufDash';") Abort
+.container
+  h1 My Products
+  .table-responsive
+    table.table.table-striped.table-hover
+      thead
+        tr
+          th Unique No.
+          th Product Name
+          th Product Type
+          th Quantity
+          th Price Per Unit (Ugx)
+          th Date of Availability
+          th Date of Expiry
+          th Units Sold
+          th Edit
+      tbody
+        tr
+          td XXXXX
+          td Product A
+          td Type A
+          td 10
+          td 1500
+          td 2023-03-15
+          td 2023-06-15
+          td 20
+          td
+            a(href='updateInventory.html') Edit Product 
+// Bootstrap JS
+script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js')
