@@ -27,6 +27,24 @@ router.get('/urbanFarmer/upDateProduct', (req, res) => {
 router.get('/urbanFarmer/reports/inventory', (req, res) => {
   res.render('urbanFarmer/reports/inventory');
 });
+router.get('/urbanFarmer/reports/sales', (req, res) => {
+  res.render('urbanFarmer/reports/sales');
+});
+router.get('/urbanFarmer/reports/orders', (req, res) => {
+  res.render('urbanFarmer/reports/orders');
+});
+router.get('/urbanFarmer/reports/reports', (req, res) => {
+  res.render('urbanFarmer/reports/reports');
+});
+router.get('/urbanFarmer/reports/few', (req, res) => {
+  res.render('urbanFarmer/reports/few');
+});
+router.get('/urbanFarmer/reports/outOfStock', (req, res) => {
+  res.render('urbanFarmer/reports/outOfStock');
+});
+router.get('/urbanFarmer/profile', (req, res) => {
+  res.render('urbanFarmer/profile');
+});
 
 
 

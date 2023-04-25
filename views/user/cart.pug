@@ -1,0 +1,258 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title UFarm | Shopping cart
+  // Google Font
+  link(href='https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap' rel='stylesheet')
+  // Css Styles
+  link(rel='stylesheet' href='css/bootstrap.min.css' type='text/css')
+  link(rel='stylesheet' href='css/font-awesome.min.css' type='text/css')
+  link(rel='stylesheet' href='css/elegant-icons.css' type='text/css')
+  link(rel='stylesheet' href='css/nice-select.css' type='text/css')
+  link(rel='stylesheet' href='css/jquery-ui.min.css' type='text/css')
+  link(rel='stylesheet' href='css/owl.carousel.min.css' type='text/css')
+  link(rel='stylesheet' href='css/slicknav.min.css' type='text/css')
+  link(rel='stylesheet' href='css/style.css' type='text/css')
+// Humberger Begin
+.humberger__menu__overlay
+.humberger__menu__wrapper
+  .humberger__menu__logo
+    h1 UFarm
+
+  .humberger__menu__widget
+    .header__top__right__auth
+      a(href='../login')
+        i.fa.fa-user
+        |  Login
+  nav.humberger__menu__nav.mobile-menu
+    ul
+      li.active
+        a(href='../') Home
+      li
+        a(href='/user/productsGrid') Shop
+      li
+        a(href='#') Pages
+        ul.header__menu__dropdown
+          li
+            a(href='/user/productsDetails') Shop Details
+          li
+            a(href='/user/cart') Shoping Cart
+          li
+            a(href='/user/checkout') Check Out
+      li
+        a(href='./user/contact.html') Contact
+  #mobile-menu-wrap
+  .humberger__menu__contact
+// Humberger End
+// Header Section Begin
+header.header
+  .header__top
+    .container
+      .row
+        .col-lg-6
+          .header__top__left
+        .col-lg-6
+          .header__top__right
+            .header__top__right__auth
+              a(href='../login')
+                i.fa.fa-user
+                |  Login
+  .container
+    .row
+      .col-lg-3
+        .header__logo
+          h1 UFarm
+      .col-lg-6
+        nav.header__menu
+          ul
+            li
+              a(href='../') Home
+            li.active
+              a(href='/user/productsGrid') Shop
+            li
+              a(href='#') Pages
+              ul.header__menu__dropdown
+                li
+                  a(href='/user/productDetails') Shop Details
+                li
+                  a(href='/user/cart') Shoping Cart
+                li
+                  a(href='/user/checkout') Check Out
+            li
+              a(href='./contact.html') Contact
+      .col-lg-3
+    .humberger__open
+      i.fa.fa-bars
+// Header Section End
+// Hero Section Begin
+section.hero.hero-normal
+  .container
+    .row
+      .col-lg-3
+        .hero__categories
+          .hero__categories__all
+            i.fa.fa-bars
+            span All departments
+          ul
+            li
+              a(href='#') Fresh Meat
+            li
+              a(href='#') Vegetables
+            li
+              a(href='#') Fruit &amp; Nut Gifts
+            li
+              a(href='#') Fresh Berries
+            li
+              a(href='#') Ocean Foods
+            li
+              a(href='#') Butter &amp; Eggs
+            li
+              a(href='#') Fastfood
+            li
+              a(href='#') Fresh Onion
+            li
+              a(href='#') Papayaya &amp; Crisps
+            li
+              a(href='#') Oatmeal
+            li
+              a(href='#') Fresh Bananas
+      .col-lg-9
+        .hero__search
+          .hero__search__form
+            form(action='#')
+              .hero__search__categories
+                | All Categories
+                span.arrow_carrot-down
+              input(type='text' placeholder='What do yo u need?')
+              button.site-btn(type='submit') SEARCH
+          .hero__search__phone
+            .hero__search__phone__icon
+              i.fa.fa-phone
+            .hero__search__phone__text
+              h5 +256 708153467
+              span support 24/7 time
+// Hero Section End
+// Breadcrumb Section Begin
+section.breadcrumb-section.set-bg(data-setbg='img/breadcrumb.jpg')
+  .container
+    .row
+      .col-lg-12.text-center
+        .breadcrumb__text
+          h2 Shopping Cart
+          .breadcrumb__option
+            a(href='./index.html') Home
+            span Shopping Cart
+// Breadcrumb Section End
+// Shoping Cart Section Begin
+section.shoping-cart.spad
+  .container
+    .row
+      .col-lg-12
+        .shoping__cart__table
+          table
+            thead
+              tr
+                th.shoping__product Products
+                th Price
+                th Quantity
+                th Total
+                th
+            tbody
+              tr
+                td.shoping__cart__item
+                  img(src='img/cart/cart-1.jpg' alt='')
+                  h5 Vegetable&rsquo;s Package
+                td.shoping__cart__price
+                  | 10000
+                td.shoping__cart__quantity
+                  .quantity
+                    .pro-qty
+                      input(type='text' value='1')
+                td.shoping__cart__total
+                  | 14000
+                td.shoping__cart__item__close
+                  span.icon_close
+              tr
+                td.shoping__cart__item
+                  img(src='img/cart/cart-2.jpg' alt='')
+                  h5 Fresh Garden Vegetable
+                td.shoping__cart__price
+                  | 10000
+                td.shoping__cart__quantity
+                  .quantity
+                    .pro-qty
+                      input(type='text' value='1')
+                td.shoping__cart__total
+                  | 24000
+                td.shoping__cart__item__close
+                  span.icon_close
+              tr
+                td.shoping__cart__item
+                  img(src='img/cart/cart-3.jpg' alt='')
+                  h5 Organic Bananas
+                td.shoping__cart__price
+                  | 2000
+                td.shoping__cart__quantity
+                  .quantity
+                    .pro-qty
+                      input(type='text' value='1')
+                td.shoping__cart__total
+                  | 3000
+                td.shoping__cart__item__close
+                  span.icon_close
+    .row
+      .col-lg-12
+        .shoping__cart__btns
+          a.primary-btn.cart-btn(href='#') CONTINUE SHOPPING
+          a.primary-btn.cart-btn.cart-btn-right(href='#')
+            span.icon_loading
+            |                             Upadate Cart
+      .col-lg-6
+        .shoping__continue
+          .shoping__discount
+            h5 Discount Codes
+            form(action='#')
+              input(type='text' placeholder='Enter your coupon code')
+              button.site-btn(type='submit') APPLY COUPON
+      .col-lg-6
+        .shoping__checkout
+          h5 Cart Total
+          ul
+            li
+              | Subtotal 
+              span Ugx.63000
+            li
+              | Total 
+              span Ugx.63000
+          a.primary-btn(href='#') PROCEED TO CHECKOUT
+// Shoping Cart Section End
+// Footer Section Begin
+footer.footer.spad
+  .container
+    .row
+      .col-lg-3.col-md-6.col-sm-6
+        .footer__about
+      .col-lg-4.col-md-6.col-sm-6.offset-lg-1
+      .col-lg-4.col-md-12
+    .row
+      .col-lg-12
+        .footer__copyright
+          .footer__copyright__text
+            | Copyright &copy;
+            script.
+              document.write(new Date().getFullYear());
+            |  All rights reserved | UFarm
+          .footer__copyright__payment
+            img(src='img/payment-item.png' alt='')
+// Footer Section End
+// Js Plugins
+script(src='js/jquery-3.3.1.min.js')
+script(src='js/bootstrap.min.js')
+script(src='js/jquery.nice-select.min.js')
+script(src='js/jquery-ui.min.js')
+script(src='js/jquery.slicknav.js')
+script(src='js/mixitup.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/main.js')

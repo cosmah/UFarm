@@ -31,6 +31,24 @@ router.get('/urbanFarmer/upDateProduct', function (req, res) {
 });
 router.get('/urbanFarmer/reports/inventory', function (req, res) {
   res.render('urbanFarmer/reports/inventory');
+});
+router.get('/urbanFarmer/reports/sales', function (req, res) {
+  res.render('urbanFarmer/reports/sales');
+});
+router.get('/urbanFarmer/reports/orders', function (req, res) {
+  res.render('urbanFarmer/reports/orders');
+});
+router.get('/urbanFarmer/reports/reports', function (req, res) {
+  res.render('urbanFarmer/reports/reports');
+});
+router.get('/urbanFarmer/reports/few', function (req, res) {
+  res.render('urbanFarmer/reports/few');
+});
+router.get('/urbanFarmer/reports/outOfStock', function (req, res) {
+  res.render('urbanFarmer/reports/outOfStock');
+});
+router.get('/urbanFarmer/profile', function (req, res) {
+  res.render('urbanFarmer/profile');
 }); // // POST request to handle the product form submission and save data to the database
 // router.post('/aofficer/FoReg', async(req, res) => {
 //   try {

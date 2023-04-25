@@ -21,41 +21,28 @@ head
 .humberger__menu__wrapper
   .humberger__menu__logo
     h1 Ufarm
-  .humberger__menu__cart
-    ul
-      li
-        a(href='#')
-          i.fa.fa-heart
-          span 1
-      li
-        a(href='#')
-          i.fa.fa-shopping-bag
-          span 3
-    .header__cart__price
-      | item: 
-      span Ugx.54000/-
   .humberger__menu__widget
     .header__top__right__auth
-      a(href='#')
+      a(href='login')
         i.fa.fa-user
-        |  Login
+        |  Login Here
   nav.humberger__menu__nav.mobile-menu
     ul
       li.active
-        a(href='./index.html') Home
+        a(href='/') Home
       li
-        a(href='./shop-grid.html') Shop
+        a(href='/user/productsGrid') Shop
+      //- li
+      //-   a(href='#') Pages
+      //-   ul.header__menu__dropdown
+      //-     li
+      //-       a(href='./shop-details.html') Shop Details
+      //-     li
+      //-       a(href='./shoping-cart.html') Shoping Cart
+      //-     li
+      //-       a(href='./checkout.html') Check Out
       li
-        a(href='#') Pages
-        ul.header__menu__dropdown
-          li
-            a(href='./shop-details.html') Shop Details
-          li
-            a(href='./shoping-cart.html') Shoping Cart
-          li
-            a(href='./checkout.html') Check Out
-      li
-        a(href='/contact') Contact
+        a(href='./contact.html') Contact
   #mobile-menu-wrap
   .header__top__right__social
     a(href='#')
@@ -76,9 +63,9 @@ header.header
         .col-lg-6.col-md-6
           .header__top__right
             .header__top__right__auth
-              a(href='#')
+              a(href='login')
                 i.fa.fa-user
-                |  Login
+                |  Login Here 
   .container
     .row
       .col-lg-3
@@ -86,25 +73,12 @@ header.header
         nav.header__menu
           ul
             li.active
-              a(href='./index.html') Home
+              a(href='/') Home
             li
-              a(href='./landing/shop-grid.html') Shop
+              a(href='/user/productsGrid') Shop
             li
               a(href='./contact.html') Contact
       .col-lg-3
-        .header__cart
-          ul
-            li
-              a(href='#')
-                i.fa.fa-heart
-                span 1
-            li
-              a(href='#')
-                i.fa.fa-shopping-bag
-                span 3
-          .header__cart__price
-            | item: 
-            span Ugx.54000/-
     .humberger__open
       i.fa.fa-bars
 // Header Section End

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Orders - Urban Farmer</title>
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+  <!-- Custom CSS-->
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #f2f2f2;
+    }
+    h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    }
+    .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+    table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+    }
+    th,
+    td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    }
+    th {
+    font-weight: bold;
+    text-align: left;
+    background-color: #e9ecef;
+    }
+    tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+    }
+    .btn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    }
+    .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    }
+    .btn-primary:hover {
+    background-color: #0062cc;
+    border-color: #005cbf;
+    }
+    .abort-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    }
+  </style>
+</head>
+<button class="abort-button" onclick="window.location.href = '/urbanFarmer/reports/reports';">Abort</button>
+<div class="container">
+  <h1 class="text-center mb-5">My Orders</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order Number</th>
+        <th>Product Name</th>
+        <th>Order Date</th>
+        <th>Quantity</th>
+        <th>Total Price (Ugx)</th>
+        <th>Order Status</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>Tomatoes</td>
+        <td>2023-03-10</td>
+        <td>5 lbs</td>
+        <td>25000</td>
+        <td><span class="badge bg-warning text-dark">Pending</span></td>
+        <td><a class="btn btn-primary" href="sales">View Details</a></td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Lettuce</td>
+        <td>2023-03-11</td>
+        <td>3 heads</td>
+        <td>10000</td>
+        <td><span class="badge bg-success">Delivered</span></td>
+        <td><a class="btn btn-primary" href="sales">View Details</a></td>
+      </tr>
+      <tr>
+        <td>003</td>
+        <td>Carrots</td>
+        <td>2023-03-12</td>
+        <td>3 heads</td>
+        <td>267800</td>
+        <td><span class="badge bg-success">Delivered</span></td>
+        <td><a class="btn btn-primary" href="sales">View Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- Bootstrap JS (Optional)-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>

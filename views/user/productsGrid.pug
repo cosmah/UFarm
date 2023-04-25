@@ -1,0 +1,595 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='description' content='Ogani Template')
+  meta(name='keywords' content='Ogani, unica, creative, html')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title Products
+  // Google Font
+  link(href='https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap' rel='stylesheet')
+  // Css Styles
+  link(rel='stylesheet' href='css/bootstrap.min.css' type='text/css')
+  link(rel='stylesheet' href='css/font-awesome.min.css' type='text/css')
+  link(rel='stylesheet' href='css/elegant-icons.css' type='text/css')
+  link(rel='stylesheet' href='css/nice-select.css' type='text/css')
+  link(rel='stylesheet' href='css/jquery-ui.min.css' type='text/css')
+  link(rel='stylesheet' href='css/owl.carousel.min.css' type='text/css')
+  link(rel='stylesheet' href='css/slicknav.min.css' type='text/css')
+  link(rel='stylesheet' href='css/style.css' type='text/css')
+// Humberger Begin
+.humberger__menu__overlay
+.humberger__menu__wrapper
+  .humberger__menu__logo
+    h1 UFarm Harvest
+    | &gt;
+  .humberger__menu__widget
+    .header__top__right__auth
+      a(href='./login')
+        i.fa.fa-user
+        |  Login
+  nav.humberger__menu__nav.mobile-menu
+    ul
+      li.active
+        a(href='../') Home
+      li
+        a(href='/user/productsGrid') Shop
+      li
+        a(href='#') Pages
+        ul.header__menu__dropdown
+          li
+            a(href='/productDetails') Shop Details
+          li
+            a(href='/cart') Shoping Cart
+          li
+            a(href='/checkout') Check Out
+      li
+        a(href='./contact.html') Contact
+  #mobile-menu-wrap
+// Humberger End
+// Header Section Begin
+header.header
+  .header__top
+    .container
+      .row
+        .col-lg-6
+          .header__top__right__auth
+            a(href='../login')
+              i.fa.fa-user
+              |  Login
+  .container
+    .row
+      .col-lg-3
+        .header__logo
+          h1 UFarm Harvest
+      .col-lg-6
+        nav.header__menu
+          ul
+            li
+              a(href='../') Home
+            li.active
+              a(href='productsGrid') Shop
+            li
+              a(href='#') Pages
+              ul.header__menu__dropdown
+                li
+                  a(href='productDetails') Shop Details
+                li
+                  a(href='/cart') Shoping Cart
+                li
+                  a(href='/checkout') Check Out
+            li
+              a(href='./contact.html') Contact
+    .humberger__open
+      i.fa.fa-bars
+// Header Section End
+// Hero Section Begin
+section.hero.hero-normal
+  .container
+    .row
+      .col-lg-3
+        .hero__categories
+          .hero__categories__all
+            i.fa.fa-bars
+            span Most trending
+          ul
+            li
+              a(href='#') Fresh Meat
+            li
+              a(href='#') Vegetables
+            li
+              a(href='#') Fruit &amp; Nut Gifts
+            li
+              a(href='#') Fresh Berries
+            li
+              a(href='#') Ocean Foods
+            li
+              a(href='#') Butter &amp; Eggs
+            li
+              a(href='#') Fastfood
+            li
+              a(href='#') Fresh Onion
+            li
+              a(href='#') Papayaya &amp; Crisps
+            li
+              a(href='#') Oatmeal
+            li
+              a(href='#') Fresh Bananas
+      .col-lg-9
+        .hero__search
+          .hero__search__form
+            form(action='#')
+              .hero__search__categories
+                | All Categories
+                span.arrow_carrot-down
+              input(type='text' placeholder='What do yo u need?')
+              button.site-btn(type='submit') SEARCH
+// Hero Section End
+// Breadcrumb Section Begin
+section.breadcrumb-section.set-bg(data-setbg='img/breadcrumb.jpg')
+  .container
+    .row
+      .col-lg-12.text-center
+        .breadcrumb__text
+          h2 UFarm Shop
+          .breadcrumb__option
+            a(href='./index.html') Home
+            span Shop
+// Breadcrumb Section End
+// Product Section Begin
+section.product.spad
+  .container
+    .row
+      .col-lg-3.col-md-5
+        .sidebar
+          .sidebar__item
+            h4 Products
+            ul
+              li
+                a(href='#') Fresh Meat
+              li
+                a(href='#') Vegetables
+              li
+                a(href='#') Fruit &amp; Nut Gifts
+              li
+                a(href='#') Fresh Berries
+              li
+                a(href='#') Ocean Foods
+              li
+                a(href='#') Butter &amp; Eggs
+              li
+                a(href='#') Fastfood
+              li
+                a(href='#') Fresh Onion
+              li
+                a(href='#') Papayaya &amp; Crisps
+              li
+                a(href='#') Oatmeal
+          .sidebar__item
+            .latest-product__text
+              h4 Latest Products
+              .latest-product__slider.owl-carousel
+                .latest-prdouct__slider__item
+                  a.latest-product__item(href='#')
+                    .latest-product__item__pic
+                      img(src='img/latest-product/lp-1.jpg' alt='')
+                    .latest-product__item__text
+                      h6 Product
+                      span 10000
+                  a.latest-product__item(href='#')
+                    .latest-product__item__pic
+                      img(src='img/latest-product/lp-2.jpg' alt='')
+                    .latest-product__item__text
+                      h6 Product
+                      span 10000
+                  a.latest-product__item(href='#')
+                    .latest-product__item__pic
+                      img(src='img/latest-product/lp-3.jpg' alt='')
+                    .latest-product__item__text
+                      h6 Product
+                      span 10000
+                .latest-prdouct__slider__item
+                  a.latest-product__item(href='#')
+                    .latest-product__item__pic
+                      img(src='img/latest-product/lp-1.jpg' alt='')
+                    .latest-product__item__text
+                      h6 Product
+                      span 10000
+                  a.latest-product__item(href='#')
+                    .latest-product__item__pic
+                      img(src='img/latest-product/lp-2.jpg' alt='')
+                    .latest-product__item__text
+                      h6 Product
+                      span 10000
+                  a.latest-product__item(href='#')
+                    .latest-product__item__pic
+                      img(src='img/latest-product/lp-3.jpg' alt='')
+                    .latest-product__item__text
+                      h6 Product
+                      span 10000
+      .col-lg-9.col-md-7
+        .product__discount
+          .section-title.product__discount__title
+            h2 Sale Off
+          .row
+            .product__discount__slider.owl-carousel
+              .col-lg-4
+                .product__discount__item
+                  .product__discount__item__pic.set-bg(data-setbg='img/product/discount/pd-1.jpg')
+                    .product__discount__percent -20%
+                    ul.product__item__pic__hover
+                      li
+                        a(href='#')
+                          i.fa.fa-heart
+                      li
+                        a(href='#')
+                          i.fa.fa-retweet
+                      li
+                        a(href='#')
+                          i.fa.fa-shopping-cart
+                  .product__discount__item__text
+                    span Dried Fruit
+                    h5
+                      a(href='#') Raisin&rsquo;n&rsquo;nuts
+                    .product__item__price
+                      | 10000 
+                      span 12000
+              .col-lg-4
+                .product__discount__item
+                  .product__discount__item__pic.set-bg(data-setbg='img/product/discount/pd-2.jpg')
+                    .product__discount__percent -20%
+                    ul.product__item__pic__hover
+                      li
+                        a(href='#')
+                          i.fa.fa-heart
+                      li
+                        a(href='#')
+                          i.fa.fa-retweet
+                      li
+                        a(href='#')
+                          i.fa.fa-shopping-cart
+                  .product__discount__item__text
+                    span Vegetables
+                    h5
+                      a(href='#') Vegetables&rsquo;package
+                    .product__item__price
+                      | 10000 
+                      span 12000
+              .col-lg-4
+                .product__discount__item
+                  .product__discount__item__pic.set-bg(data-setbg='img/product/discount/pd-3.jpg')
+                    .product__discount__percent -20%
+                    ul.product__item__pic__hover
+                      li
+                        a(href='#')
+                          i.fa.fa-heart
+                      li
+                        a(href='#')
+                          i.fa.fa-retweet
+                      li
+                        a(href='#')
+                          i.fa.fa-shopping-cart
+                  .product__discount__item__text
+                    span Dried Fruit
+                    h5
+                      a(href='#') Mixed Fruitss
+                    .product__item__price
+                      | 10000 
+                      span 12000
+              .col-lg-4
+                .product__discount__item
+                  .product__discount__item__pic.set-bg(data-setbg='img/product/discount/pd-4.jpg')
+                    .product__discount__percent -20%
+                    ul.product__item__pic__hover
+                      li
+                        a(href='#')
+                          i.fa.fa-heart
+                      li
+                        a(href='#')
+                          i.fa.fa-retweet
+                      li
+                        a(href='#')
+                          i.fa.fa-shopping-cart
+                  .product__discount__item__text
+                    span Dried Fruit
+                    h5
+                      a(href='#') Raisin&rsquo;n&rsquo;nuts
+                    .product__item__price
+                      | 10000 
+                      span 12000
+              .col-lg-4
+                .product__discount__item
+                  .product__discount__item__pic.set-bg(data-setbg='img/product/discount/pd-5.jpg')
+                    .product__discount__percent -20%
+                    ul.product__item__pic__hover
+                      li
+                        a(href='#')
+                          i.fa.fa-heart
+                      li
+                        a(href='#')
+                          i.fa.fa-retweet
+                      li
+                        a(href='#')
+                          i.fa.fa-shopping-cart
+                  .product__discount__item__text
+                    span Dried Fruit
+                    h5
+                      a(href='#') Raisin&rsquo;n&rsquo;nuts
+                    .product__item__price
+                      | 10000 
+                      span 12000
+              .col-lg-4
+                .product__discount__item
+                  .product__discount__item__pic.set-bg(data-setbg='img/product/discount/pd-6.jpg')
+                    .product__discount__percent -20%
+                    ul.product__item__pic__hover
+                      li
+                        a(href='#')
+                          i.fa.fa-heart
+                      li
+                        a(href='#')
+                          i.fa.fa-retweet
+                      li
+                        a(href='#')
+                          i.fa.fa-shopping-cart
+                  .product__discount__item__text
+                    span Dried Fruit
+                    h5
+                      a(href='#') Raisin&rsquo;n&rsquo;nuts
+                    .product__item__price
+                      | 10000 
+                      span 12000
+        .filter__item
+          .row
+            .col-lg-4.col-md-5
+              .filter__sort
+                span Sort By
+                select
+                  option(value='0') Default
+                  option(value='0') Default
+            .col-lg-4.col-md-4
+              .filter__found
+                h6
+                  span 16
+                  |  Products found
+            .col-lg-4.col-md-3
+              .filter__option
+                span.icon_grid-2x2
+                span.icon_ul
+        .row
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-1.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-2.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-3.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-4.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-5.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-6.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-7.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-8.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-9.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-10.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-11.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+          .col-lg-4.col-md-6.col-sm-6
+            .product__item
+              .product__item__pic.set-bg(data-setbg='img/product/product-12.jpg')
+                ul.product__item__pic__hover
+                  li
+                    a(href='#')
+                      i.fa.fa-heart
+                  li
+                    a(href='#')
+                      i.fa.fa-retweet
+                  li
+                    a(href='#')
+                      i.fa.fa-shopping-cart
+              .product__item__text
+                h6
+                  a(href='#') Product
+                h5 10000
+        .product__pagination
+          a(href='#') 1
+          a(href='#') 2
+          a(href='#') 3
+          a(href='#')
+            i.fa.fa-long-arrow-right
+// Product Section End
+// Footer Section Begin
+footer.footer.spad
+  .container
+    .row
+    .row
+      .col-lg-12
+        .footer__copyright
+          .footer__copyright__text
+            p
+              | Copyright &copy;
+              script.
+                document.write(new Date().getFullYear());
+              |  All rights reserved
+          .footer__copyright__payment
+            img(src='img/payment-item.png' alt='')
+// Footer Section End
+// Js Plugins
+script(src='js/jquery-3.3.1.min.js')
+script(src='js/bootstrap.min.js')
+script(src='js/jquery.nice-select.min.js')
+script(src='js/jquery-ui.min.js')
+script(src='js/jquery.slicknav.js')
+script(src='js/mixitup.min.js')
+script(src='js/owl.carousel.min.js')
+script(src='js/main.js')

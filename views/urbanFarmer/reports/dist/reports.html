@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+  <title>UFarm - Reports</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="reports.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark"><a class="navbar-brand" href="../ufDash">Dashboard</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"><a class="nav-link" href="orders">Orders</a></li>
+      <li class="nav-item"><a class="nav-link" href="inventory">Inventory</a></li>
+      <li class="nav-item active"><a class="nav-link" href="reports.html">Reports</a></li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar-->
+    <div class="col-md-3 bg-light sidebar">
+      <div class="list-group"><a class="list-group-item list-group-item-action active" href="#"><i class="fas fa-chart-bar mr-2"></i> Sales Reports</a><a class="list-group-item list-group-item-action" href="#"><i class="fas fa-boxes mr-2"></i> Inventory Reports</a><a class="list-group-item list-group-item-action" href="#"><i class="fas fa-users mr-2"></i> Customer Reports</a><a class="list-group-item list-group-item-action" href="#"><i class="fas fa-credit-card mr-2"></i> Payment Reports</a><a class="list-group-item list-group-item-action" href="#"><i class="fas fa-file-alt mr-2"></i> Custom Reports</a></div>
+    </div>
+    <div class="col-md-9">
+      <div class="report-section"></div>
+      <div class="card mb-3">
+        <div class="card-header">
+          <h5 class="card-title mb-0">Inventory Reports</h5>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h6 class="card-title">Product Types Report</h6>
+                  <p class="card-text">View the inventory by product types.</p><a class="btn btn-primary" href="inventory">View Report</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h6 class="card-title">Low Stock Report</h6>
+                  <p class="card-text">View products with low stock levels.</p><a class="btn btn-primary" href="few">View Report</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h6 class="card-title">Out of Stock Report</h6>
+                  <p class="card-text">View products that are currently out of stock.</p><a class="btn btn-primary" href="outOfStock">View Report</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of column-->
+    </div>
+  </div>
+</div>

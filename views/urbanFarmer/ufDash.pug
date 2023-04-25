@@ -28,12 +28,12 @@ head
     a.w3-bar-item.w3-button.w3-hide-small.w3-right.w3-padding-large.w3-hover-white(href='../index.html' title='My Account')
       img.w3-circle(src='../assets/lady.png' style='height: 23px; width: 23px' alt='Avatar')
     .w3-bar.w3-black
-      a.w3-bar-item.w3-button.w3-hide-small(href='#')
+      a.w3-bar-item.w3-button.w3-hide-small(href='../')
         i.fa.fa-home
         |  Home
-      a.w3-bar-item.w3-button.w3-hide-small(href='#')
+      a.w3-bar-item.w3-button.w3-hide-small(href='Profile')
         i.fa.fa-info-circle
-        |  About
+        |  Profile 
       a.w3-bar-item.w3-button.w3-hide-small(href='#')
         i.fa.fa-envelope
         |  Contact
@@ -71,25 +71,14 @@ head
             i.fa.fa-comments
             |  Interact with Customers
       .w3-dropdown-hover.w3-hide-small
-        button.w3-button
+        button.w3-button(href='/urbanFarmer/reports/reports')
           i.fa.fa-file-text
           |  Reports 
           i.fa.fa-caret-down
         .w3-dropdown-content.w3-bar-block.w3-card-4
-          a.w3-bar-item.w3-button(href='reports/inventory')
+          a.w3-bar-item.w3-button(href='/urbanFarmer/reports/reports')
             i.fa.fa-line-chart
-            |  Inventory
-            i.fa.fa-caret-down
-          .w3-dropdown-content.w3-bar-block.w3-card-4
-            a.w3-bar-item.w3-button(href='addProduct')
-              i.fa.fa-upload
-              |  Upload Product
-            a.w3-bar-item.w3-button(href='myproducts.html')
-              i.fa.fa-list-alt
-              |  Product List
-            a.w3-bar-item.w3-button(href='upDateProduct')
-              i.fa.fa-edit
-              |  Update Product
+            |  Generate Reports
 // Navbar on small screens
 #navDemo.w3-bar-block.w3-theme-d2.w3-hide.w3-hide-large.w3-hide-medium.w3-large
   a.w3-bar-block.w3-theme-d2.w3-hide.w3-hide-large.w3-hide-medium.w3-large(href='#')
