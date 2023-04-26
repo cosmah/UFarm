@@ -37,14 +37,14 @@ router.post("/login", passport.authenticate("local", {
           console.log("this is the user session:", req.session); // res.redirect("/students")
 
           if (req.user.role == "ao" && userExist) {
-            res.redirect("/aodash");
+            res.redirect("/aofficer/aoDash");
           } else if (req.user.role == "uf" && userExist) {
-            res.redirect("/ufdash");
-          } else if (req.user.role == "ao" && userExist) {
-            res.redirect("aodash");
+            res.redirect("/urbanFarmer/ufDash");
+          } else if (req.user.role == "fo" && userExist) {
+            res.redirect("/farmerOne/foDash");
           } else {
             if (userExist) {
-              res.redirect("/farmerOne/foDash");
+              res.redirect("/user/productsGrid");
             } else {
               res.send("you are not registered");
             }

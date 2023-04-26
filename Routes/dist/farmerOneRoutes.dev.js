@@ -10,15 +10,25 @@ var Farmers = require('../Models/ufarmerModel'); //import mod3l
 //dashboard
 
 
-router.get('/farmerOne/foDash', function (req, res) {
+router.get('/farmerOne/foDash', isAuthenticated, function (req, res) {
   res.render('farmerOne/foDash');
 }); //famers register
 
-router.get('/farmerOne/famersRegister', function (req, res) {
+router.get('/farmerOne/famersRegister', isAuthenticated, function (req, res) {
   res.render('farmerOne/famersRegister');
+}); // Logout route
+
+router.get('/farmerOne/logout', isAuthenticated, function (req, res) {
+  req.session.destroy(function (err) {
+    if (err) {
+      console.log(err);
+    }
+
+    res.redirect('../');
+  });
 }); //the action name in the form is the one we use in the post route
 
-router.post('/registerfarmerones', function _callee(req, res) {
+router.post('/registerfarmerones', isAuthenticated, function _callee(req, res) {
   var register;
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
@@ -48,7 +58,7 @@ router.post('/registerfarmerones', function _callee(req, res) {
     }
   }, null, null, [[0, 8]]);
 });
-router.get('/farmerOne/urbanFarmers', function _callee2(req, res) {
+router.get('/farmerOne/urbanFarmers', isAuthenticated, function _callee2(req, res) {
   var items;
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
@@ -80,10 +90,21 @@ router.get('/farmerOne/urbanFarmers', function _callee2(req, res) {
     }
   }, null, null, [[0, 8]]);
 });
-router.get('/farmerOne/ufSignUp', function (req, res) {
+router.get('/farmerOne/ufSignUp', isAuthenticated, function (req, res) {
   res.render('farmerOne/ufSignUp');
 });
-router.get('/farmerOne/foDash', function (req, res) {
+router.get('/farmerOne/foDash', isAuthenticated, function (req, res) {
   res.render('farmerOne/foDash');
-});
+}); // Authentication middleware
+
+function isAuthenticated(req, res, next) {
+  if (req.session && req.session.user) {
+    // User is logged in, allow access
+    return next();
+  } else {
+    // User is not logged in, redirect to login page
+    res.redirect('/login');
+  }
+}
+
 module.exports = router;

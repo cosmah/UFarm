@@ -4,10 +4,10 @@ const mongoose = require("mongoose");
 //give our schema a name
 const productSchema = new mongoose.Schema({
     //tell schema what kind of data to expect
-    products:{
-        type:String,
-        trim:true //trim removes blankspace after entering input, INCASE OF PASSWORD VALIDATTION i.e TO VALIDATE A SPACE CHARACTER, DONT USE TRIM
-    },
+    products: {
+        type: [String], // use an array of strings instead of just a single string
+        trim: true
+      },      
     pname:{
         type:String,
         trim:true

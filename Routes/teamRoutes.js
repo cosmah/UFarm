@@ -3,64 +3,73 @@ const router = express.Router();
 const connectEnsureLogin = require("connect-ensure-login")
 const FarmerOne = require('../Models/AgricOfficerModel') //import model
 
+
+// Logout route
+router.get('/urbanFarmer/logout', (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.log(err);
+    }
+    res.redirect('../');
+  });
+});
+
 //dashboard
-router.get('/urbanFarmer/ufDash', (req, res) => {
+router.get('/urbanFarmer/ufDash', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/ufDash');
 });
 
 // GET request to render the registration form
-router.get('/aofficer/FoSignUp', (req, res) => {
+router.get('/aofficer/FoSignUp', isAuthenticated,(req, res) => {
   res.render('aofficer/FoSignUp');
 });
-router.get('/urbanFarmer/addProduct', (req, res) => {
+router.get('/urbanFarmer/addProduct', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/addProduct');
 });
-router.get('/urbanFarmer/feedback', (req, res) => {
+router.get('/urbanFarmer/feedback', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/feedback');
 });
-router.get('/urbanFarmer/products', (req, res) => {
+router.get('/urbanFarmer/products', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/products');
 });
-router.get('/urbanFarmer/upDateProduct', (req, res) => {
+router.get('/urbanFarmer/upDateProduct', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/upDateProduct');
 });
-router.get('/urbanFarmer/reports/inventory', (req, res) => {
+router.get('/urbanFarmer/reports/inventory', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/reports/inventory');
 });
-router.get('/urbanFarmer/reports/sales', (req, res) => {
+router.get('/urbanFarmer/reports/sales', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/reports/sales');
 });
-router.get('/urbanFarmer/reports/orders', (req, res) => {
+router.get('/urbanFarmer/reports/orders', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/reports/orders');
 });
-router.get('/urbanFarmer/reports/reports', (req, res) => {
+router.get('/urbanFarmer/reports/reports', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/reports/reports');
 });
-router.get('/urbanFarmer/reports/few', (req, res) => {
+router.get('/urbanFarmer/reports/few', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/reports/few');
 });
-router.get('/urbanFarmer/reports/outOfStock', (req, res) => {
+router.get('/urbanFarmer/reports/outOfStock', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/reports/outOfStock');
 });
-router.get('/urbanFarmer/profile', (req, res) => {
+router.get('/urbanFarmer/profile', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/profile');
 });
 
 
 
 
-// // POST request to handle the product form submission and save data to the database
-// router.post('/aofficer/FoReg', async(req, res) => {
-//   try {
-//     const register = new FarmerOne(req.body);
-//     await register.save();
-//     res.render('aofficer/FoReg');
-//     console.log(req.body);
-//   } catch(err) {
-//     console.log(err);
-//     //res.status(400).render("/")
-//   }
-// });
+// Authentication middleware
+function isAuthenticated(req, res, next) {
+  if (req.session && req.session.user) {
+    // User is logged in, allow access
+    return next();
+  } else {
+    // User is not logged in, redirect to login page
+    res.redirect('/login');
+  }
+}
 
 
 

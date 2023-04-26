@@ -4,17 +4,28 @@ const connectEnsureLogin = require("connect-ensure-login")
 const Farmers = require('../Models/ufarmerModel')//import mod3l
 
 //dashboard
-router.get('/farmerOne/foDash', (req, res) => {
+router.get('/farmerOne/foDash', isAuthenticated,(req, res) => {
   res.render('farmerOne/foDash');
 });
 
 //famers register
-router.get('/farmerOne/famersRegister', (req, res) => {
+router.get('/farmerOne/famersRegister', isAuthenticated,(req, res) => {
   res.render('farmerOne/famersRegister');
 });
 
+// Logout route
+router.get('/farmerOne/logout', isAuthenticated,(req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.log(err);
+    }
+    res.redirect('../');
+  });
+});
+
+
 //the action name in the form is the one we use in the post route
-router.post('/registerfarmerones', async(req,res)=>{
+router.post('/registerfarmerones', isAuthenticated,async(req,res)=>{
   try{
       const register = new Farmers(req.body);
       await register.save()
@@ -28,7 +39,7 @@ router.post('/registerfarmerones', async(req,res)=>{
 })
 
 
-router.get('/farmerOne/urbanFarmers', async(req, res) => {
+router.get('/farmerOne/urbanFarmers', isAuthenticated,async(req, res) => {
     try{
         let items = await Farmers.find();
         console.log(items)
@@ -43,12 +54,23 @@ router.get('/farmerOne/urbanFarmers', async(req, res) => {
 
 
 
-router.get('/farmerOne/ufSignUp', (req, res) => {
+router.get('/farmerOne/ufSignUp', isAuthenticated,(req, res) => {
   res.render('farmerOne/ufSignUp');
 });
-router.get('/farmerOne/foDash', (req, res) => {
+router.get('/farmerOne/foDash', isAuthenticated,(req, res) => {
   res.render('farmerOne/foDash');
 });
 
+
+// Authentication middleware
+function isAuthenticated(req, res, next) {
+  if (req.session && req.session.user) {
+    // User is logged in, allow access
+    return next();
+  } else {
+    // User is not logged in, redirect to login page
+    res.redirect('/login');
+  }
+}
 
 module.exports = router;

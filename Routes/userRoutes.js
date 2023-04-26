@@ -4,7 +4,7 @@ const connectEnsureLogin = require("connect-ensure-login")
 const Farmers = require('../Models/ufarmerModel')//import mod3l
 
 //dashboard
-router.get('/user/checkout', (req, res) => {
+router.get('/user/checkout', isAuthenticated,(req, res) => {
   res.render('user/checkout');
 });
 router.get('/user/cart', (req, res) => {
@@ -22,6 +22,15 @@ router.get('/user/productDetails', (req, res) => {
   res.render('user/productDetails');
 });
 
-
+// Authentication middleware
+function isAuthenticated(req, res, next) {
+  if (req.session && req.session.user) {
+    // User is logged in, allow access
+    return next();
+  } else {
+    // User is not logged in, redirect to login page
+    res.redirect('/login');
+  }
+}
 
 module.exports = router;

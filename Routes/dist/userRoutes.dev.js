@@ -10,7 +10,7 @@ var Farmers = require('../Models/ufarmerModel'); //import mod3l
 //dashboard
 
 
-router.get('/user/checkout', function (req, res) {
+router.get('/user/checkout', isAuthenticated, function (req, res) {
   res.render('user/checkout');
 });
 router.get('/user/cart', function (req, res) {
@@ -24,5 +24,16 @@ router.get('/user/productsGrid', function (req, res) {
 });
 router.get('/user/productDetails', function (req, res) {
   res.render('user/productDetails');
-});
+}); // Authentication middleware
+
+function isAuthenticated(req, res, next) {
+  if (req.session && req.session.user) {
+    // User is logged in, allow access
+    return next();
+  } else {
+    // User is not logged in, redirect to login page
+    res.redirect('/login');
+  }
+}
+
 module.exports = router;

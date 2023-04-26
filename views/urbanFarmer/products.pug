@@ -20,31 +20,38 @@ head
     }
 button.abort-button(onclick="window.location.href = 'ufDash';") Abort
 .container
-  h1 My Products
-  .table-responsive
-    table.table.table-striped.table-hover
-      thead
+    h1 Products
+
+if products && products.length > 0
+  table
+    thead
+      tr
+        th Product Name
+        th Ward
+        th Date
+        th Expiry
+        th Price
+        th Quantity
+        th Payment
+        th Directions
+        th Delivery
+        th Type
+    tbody
+      each product in products
         tr
-          th Unique No.
-          th Product Name
-          th Product Type
-          th Quantity
-          th Price Per Unit (Ugx)
-          th Date of Availability
-          th Date of Expiry
-          th Units Sold
-          th Edit
-      tbody
-        tr
-          td XXXXX
-          td Product A
-          td Type A
-          td 10
-          td 1500
-          td 2023-03-15
-          td 2023-06-15
-          td 20
-          td
-            a(href='updateInventory.html') Edit Product 
+          td= product.pname
+          td= product.ward
+          td= product.date
+          td= product.expiry
+          td= product.price
+          td= product.quantity
+          td= product.payment
+          td= product.directions
+          td= product.delivery
+          td= product.type
+else
+  p No products found
+
+
 // Bootstrap JS
 script(src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js')

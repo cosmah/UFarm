@@ -10,19 +10,40 @@ var FarmerOne = require('../Models/AgricOfficerModel'); //import model
 //dashboard
 
 
-router.get('/aofficer/aoDash', function (req, res) {
+router.get('/aofficer/aoDash', isAuthenticated, function (req, res) {
   res.render('aofficer/aoDash');
 }); // GET request to render the registration form
 
-router.get('/aofficer/FoSignUp', function (req, res) {
+router.get('/aofficer/FoSignUp', isAuthenticated, function (req, res) {
   res.render('aofficer/FoSignUp');
 });
-router.get('/aofficer/FoReg', function (req, res) {
+router.get('/aofficer/FoReg', isAuthenticated, function (req, res) {
   res.render('aofficer/FoReg');
 });
-router.get('/aofficer/farmerOnes', function (req, res) {
+router.get('/aofficer/farmerOnes', isAuthenticated, function (req, res) {
   res.render('aofficer/farmerOnes');
-}); // POST request to handle the form submission and save data to the database
+}); // Logout route
+
+router.get('/aofficer/logout', function (req, res) {
+  req.session.destroy(function (err) {
+    if (err) {
+      console.log(err);
+    }
+
+    res.redirect('../');
+  });
+}); // Authentication middleware
+
+function isAuthenticated(req, res, next) {
+  if (req.session && req.session.user) {
+    // User is logged in, allow access
+    return next();
+  } else {
+    // User is not logged in, redirect to login page
+    res.redirect('/login');
+  }
+} // POST request to handle the form submission and save data to the database
+
 
 router.post('/aofficer/FoReg', function _callee(req, res) {
   var register;
@@ -54,7 +75,7 @@ router.post('/aofficer/FoReg', function _callee(req, res) {
   }, null, null, [[0, 8]]);
 }); //fetch the data
 
-router.get("/aofficer/farmerOnes", function _callee2(req, res) {
+router.get("/aofficer/farmerOnes", isAuthenticated, function _callee2(req, res) {
   var items;
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
