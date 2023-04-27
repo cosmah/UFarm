@@ -5,33 +5,26 @@ const multer = require('multer');
 const path = require('path');
 
 // GET request to render the add product page
-router.get('/urbanFarmer/addProduct', async (req, res) => {
+router.get('/urbanFarmer/products', async (req, res) => {
   try {
     const products = await Product.find();
-    res.render("urbanFarmer/addProduct", { products });
+    res.render('urbanFarmer/products', { products });
   } catch (err) {
     console.log(err);
-    res.status(500).send("Error retrieving products");
+    res.send('Failed');
   }
 });
+
+
 
 router.get("/urbanFarmer/products",(req,res)=>{
   res.render("urbanFarmer/products")
 });
+router.get("/urbanFarmer/productView",(req,res)=>{
+  res.render("urbanFarmer/productView")
+});
 
-//products register
-// router.post('/urbanFarmer/addProduct', async(req,res)=>{
-//   try{
-//       const products = new Product(req.body);
-//       await products.save()
-//       res.redirect('/urbanFarmer/addProduct')//redirect to a path, render a file
-//       console.log(req.body)
-//   }
-//   catch(err){
-//       console.log(err)
-//       //res.status(400).render("/")
-//   }
-// })
+
 //urban farmers register
 const upload = multer({
   storage: multer.diskStorage({
@@ -54,8 +47,9 @@ const upload = multer({
 
 router.post('/urbanFarmer/addProduct', upload.array('products', 3), async(req, res) => {
   try{
-      const { pname, ward, date, expiry, price, quantity, payment, directions, delivery, type } = req.body;
+      const { username,pname, ward, date, expiry, price, quantity, payment, directions, delivery, type } = req.body;
       const product = new Product({
+        username,
         pname,
         ward,
         date,

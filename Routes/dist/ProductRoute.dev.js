@@ -11,7 +11,7 @@ var multer = require('multer');
 var path = require('path'); // GET request to render the add product page
 
 
-router.get('/urbanFarmer/addProduct', function _callee(req, res) {
+router.get('/urbanFarmer/products', function _callee(req, res) {
   var products;
   return regeneratorRuntime.async(function _callee$(_context) {
     while (1) {
@@ -23,7 +23,7 @@ router.get('/urbanFarmer/addProduct', function _callee(req, res) {
 
         case 3:
           products = _context.sent;
-          res.render("urbanFarmer/addProduct", {
+          res.render('urbanFarmer/products', {
             products: products
           });
           _context.next = 11;
@@ -33,7 +33,7 @@ router.get('/urbanFarmer/addProduct', function _callee(req, res) {
           _context.prev = 7;
           _context.t0 = _context["catch"](0);
           console.log(_context.t0);
-          res.status(500).send("Error retrieving products");
+          res.send('Failed');
 
         case 11:
         case "end":
@@ -44,20 +44,10 @@ router.get('/urbanFarmer/addProduct', function _callee(req, res) {
 });
 router.get("/urbanFarmer/products", function (req, res) {
   res.render("urbanFarmer/products");
-}); //products register
-// router.post('/urbanFarmer/addProduct', async(req,res)=>{
-//   try{
-//       const products = new Product(req.body);
-//       await products.save()
-//       res.redirect('/urbanFarmer/addProduct')//redirect to a path, render a file
-//       console.log(req.body)
-//   }
-//   catch(err){
-//       console.log(err)
-//       //res.status(400).render("/")
-//   }
-// })
-//urban farmers register
+});
+router.get("/urbanFarmer/productView", function (req, res) {
+  res.render("urbanFarmer/productView");
+}); //urban farmers register
 
 var upload = multer({
   storage: multer.diskStorage({
@@ -82,15 +72,16 @@ var upload = multer({
 
 });
 router.post('/urbanFarmer/addProduct', upload.array('products', 3), function _callee2(req, res) {
-  var _req$body, pname, ward, date, expiry, price, quantity, payment, directions, delivery, type, product;
+  var _req$body, username, pname, ward, date, expiry, price, quantity, payment, directions, delivery, type, product;
 
   return regeneratorRuntime.async(function _callee2$(_context2) {
     while (1) {
       switch (_context2.prev = _context2.next) {
         case 0:
           _context2.prev = 0;
-          _req$body = req.body, pname = _req$body.pname, ward = _req$body.ward, date = _req$body.date, expiry = _req$body.expiry, price = _req$body.price, quantity = _req$body.quantity, payment = _req$body.payment, directions = _req$body.directions, delivery = _req$body.delivery, type = _req$body.type;
+          _req$body = req.body, username = _req$body.username, pname = _req$body.pname, ward = _req$body.ward, date = _req$body.date, expiry = _req$body.expiry, price = _req$body.price, quantity = _req$body.quantity, payment = _req$body.payment, directions = _req$body.directions, delivery = _req$body.delivery, type = _req$body.type;
           product = new Product({
+            username: username,
             pname: pname,
             ward: ward,
             date: date,

@@ -11,6 +11,10 @@ var productSchema = new mongoose.Schema({
     // use an array of strings instead of just a single string
     trim: true
   },
+  username: {
+    type: String,
+    trim: true
+  },
   pname: {
     type: String,
     trim: true
