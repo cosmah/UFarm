@@ -20,9 +20,25 @@ router.get('/urbanFarmer/products', async (req, res) => {
 router.get("/urbanFarmer/products",(req,res)=>{
   res.render("urbanFarmer/products")
 });
-router.get("/urbanFarmer/productView",(req,res)=>{
-  res.render("urbanFarmer/productView")
-});
+// router.get("/", async(req,res)=>{
+//     try {
+//       const products = await Product.find({ username: req.params.username });
+//       res.render('urbanFarmer/productView', { products });
+//     } catch (err) {
+//       console.error(err);
+//       res.status(500).send('Server Error');
+//     }
+//   });
+
+  router.get('/urbanFarmer/productView/:id', async (req, res) => {
+    try {
+      const product = await Product.findById(req.params.id);
+      res.render('urbanFarmer/productView', { product });
+    } catch (err) {
+      console.error(err);
+      res.sendStatus(500);
+    }
+  });  
 
 
 //urban farmers register

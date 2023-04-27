@@ -44,9 +44,46 @@ router.get('/urbanFarmer/products', function _callee(req, res) {
 });
 router.get("/urbanFarmer/products", function (req, res) {
   res.render("urbanFarmer/products");
-});
-router.get("/urbanFarmer/productView", function (req, res) {
-  res.render("urbanFarmer/productView");
+}); // router.get("/", async(req,res)=>{
+//     try {
+//       const products = await Product.find({ username: req.params.username });
+//       res.render('urbanFarmer/productView', { products });
+//     } catch (err) {
+//       console.error(err);
+//       res.status(500).send('Server Error');
+//     }
+//   });
+
+router.get('/urbanFarmer/productView/:id', function _callee2(req, res) {
+  var product;
+  return regeneratorRuntime.async(function _callee2$(_context2) {
+    while (1) {
+      switch (_context2.prev = _context2.next) {
+        case 0:
+          _context2.prev = 0;
+          _context2.next = 3;
+          return regeneratorRuntime.awrap(Product.findById(req.params.id));
+
+        case 3:
+          product = _context2.sent;
+          res.render('urbanFarmer/productView', {
+            product: product
+          });
+          _context2.next = 11;
+          break;
+
+        case 7:
+          _context2.prev = 7;
+          _context2.t0 = _context2["catch"](0);
+          console.error(_context2.t0);
+          res.sendStatus(500);
+
+        case 11:
+        case "end":
+          return _context2.stop();
+      }
+    }
+  }, null, null, [[0, 7]]);
 }); //urban farmers register
 
 var upload = multer({
@@ -71,14 +108,14 @@ var upload = multer({
   } // max file size 5MB
 
 });
-router.post('/urbanFarmer/addProduct', upload.array('products', 3), function _callee2(req, res) {
+router.post('/urbanFarmer/addProduct', upload.array('products', 3), function _callee3(req, res) {
   var _req$body, username, pname, ward, date, expiry, price, quantity, payment, directions, delivery, type, product;
 
-  return regeneratorRuntime.async(function _callee2$(_context2) {
+  return regeneratorRuntime.async(function _callee3$(_context3) {
     while (1) {
-      switch (_context2.prev = _context2.next) {
+      switch (_context3.prev = _context3.next) {
         case 0:
-          _context2.prev = 0;
+          _context3.prev = 0;
           _req$body = req.body, username = _req$body.username, pname = _req$body.pname, ward = _req$body.ward, date = _req$body.date, expiry = _req$body.expiry, price = _req$body.price, quantity = _req$body.quantity, payment = _req$body.payment, directions = _req$body.directions, delivery = _req$body.delivery, type = _req$body.type;
           product = new Product({
             username: username,
@@ -97,24 +134,24 @@ router.post('/urbanFarmer/addProduct', upload.array('products', 3), function _ca
             }) // save file paths in database
 
           });
-          _context2.next = 5;
+          _context3.next = 5;
           return regeneratorRuntime.awrap(product.save());
 
         case 5:
           res.redirect('/urbanFarmer/addProduct'); //redirect to a path, render a file
 
           console.log(req.body);
-          _context2.next = 12;
+          _context3.next = 12;
           break;
 
         case 9:
-          _context2.prev = 9;
-          _context2.t0 = _context2["catch"](0);
-          console.log(_context2.t0); //res.status(400).render("/")
+          _context3.prev = 9;
+          _context3.t0 = _context3["catch"](0);
+          console.log(_context3.t0); //res.status(400).render("/")
 
         case 12:
         case "end":
-          return _context2.stop();
+          return _context3.stop();
       }
     }
   }, null, null, [[0, 9]]);

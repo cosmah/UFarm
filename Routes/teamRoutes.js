@@ -29,6 +29,9 @@ router.get('/urbanFarmer/addProduct', isAuthenticated,(req, res) => {
 router.get('/urbanFarmer/feedback', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/feedback');
 });
+router.get('/urbanFarmer/productView', isAuthenticated,(req, res) => {
+  res.render('urbanFarmer/productView');
+});
 router.get('/urbanFarmer/products', isAuthenticated,(req, res) => {
   res.render('urbanFarmer/products');
 });

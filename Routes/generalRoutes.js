@@ -6,6 +6,10 @@ const router = express.Router();
   router.get("/contact", (req,res)=>{
     res.render("contact")
   })
+//conatct page
+  router.get("/about", (req,res)=>{
+    res.render("about")
+  })
   
   router.get("/", (req,res)=>{
     res.render("index")

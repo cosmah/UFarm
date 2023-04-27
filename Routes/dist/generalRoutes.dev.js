@@ -8,6 +8,10 @@ var router = express.Router(); //conatct page
 
 router.get("/contact", function (req, res) {
   res.render("contact");
+}); //conatct page
+
+router.get("/about", function (req, res) {
+  res.render("about");
 });
 router.get("/", function (req, res) {
   res.render("index");
