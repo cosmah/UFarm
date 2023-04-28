@@ -15,6 +15,18 @@ const router = express.Router();
     res.render("index")
   })
   
+  router.get("/user/dairy", (req,res)=>{
+    res.render("user/dairy")
+  })
+  
+  router.get("/user/horticulture", (req,res)=>{
+    res.render("user/horticulture")
+  })
+  
+  router.get("/user/poultry", (req,res)=>{
+    res.render("user/poultry")
+  })
+  
 
 
   module.exports = router

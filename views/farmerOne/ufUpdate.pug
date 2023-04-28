@@ -46,7 +46,7 @@ head
           .input-group
             span.input-group-addon
               i.glyphicon.glyphicon-user
-            input.form-control(name='dob' type='date')
+            input.form-control(name='dob' )
 
       .form-group
         label.col-md-4.control-label Gender
@@ -54,10 +54,8 @@ head
           .input-group
             span.input-group-addon
               i.glyphicon.glyphicon-user
-            select#batteryprice.form-select(type='text' name='gender')
-                option(value='Default' selected='') Select
-                option(value='Male') Male
-                option(value='Female') Female
+            input.form-control(name='gender'  type='text')
+
 
       .form-group
         label.col-md-4.control-label Email
@@ -105,31 +103,17 @@ head
           .input-group
             span.input-group-addon
               i.glyphicon.glyphicon-earphone
-            select#batteryprice.form-select(type='text' name='ward')
-                option(value='Default' selected='') Select
-                option(value='1') Ward 1
-                option(value='2') Ward 2
-                option(value='3') Ward 3
-      
+            input.form-control(name='ward'  type='text')
+
       .form-group
         label(for='residence') Residence Type:
-        select#residence.form-control(name='residence')
-          option(value='Default' selected='') Select
-          option(value='Owned') Owned
-          option(value='Rented') Rented
-          option(value='Other') Other
+            input.form-control(name='residence'  type='text')
+
 
       .form-group
         label(for='activities') Activities Engaged:
-        div
-          input#horticulture(type='checkbox', name='activities', value='Horticulture')
-          label(for='horticulture') Horticulture
-        div
-          input#poultry(type='checkbox', name='activities', value='Poultry')
-          label(for='poultry') Poultry
-        div
-          input#dairy(type='checkbox', name='activities', value='Dairy')
-          label(for='dairy') Dairy
+            input.form-control(name='activities'  type='text')
+  
 
       // Select Basic
       // Success message
@@ -139,7 +123,7 @@ head
         label.col-md-4.control-label
         .col-md-4
           br
-          button.btn.btn-warning(type='submit') SUBMIT
+          button.btn.btn-warning(type='submit') EDIT 
            
 
 script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')

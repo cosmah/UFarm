@@ -67,7 +67,7 @@
     margin-bottom: 30px;
     }
     .container{
-    background-color: #e2f8fa;
+    /*background-color: #e2f8fa;*/
     }
     .abort-button {
     position: absolute;
@@ -77,18 +77,12 @@
     }
   </style>
 </head>
-<button class="abort-button" onclick="window.location.href = 'ufDash';">Abort</button>
+<button class="abort-button" onclick="window.location.href = 'ufDash';">Back </button>
 <div class="container">
   <center>
     <h1 class="text-center mb-4">Product Upload Form</h1>
     <form id="farmers" name="registration" action="/urbanFarmer/addProduct" method="post">
       <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="products">Product Images (minimum of 3)</label>
-            <input class="form-control" id="products" type="file" name="products[]" accept="image/*" multiple="" required=""><small class="form-text text-muted">Maximum file size: 5MB per image</small>
-          </div>
-        </div>
         <div class="col-md-6">
           <div class="form-group">
             <label for="username">Unique No.</label>

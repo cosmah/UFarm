@@ -21,7 +21,6 @@ head
 .humberger__menu__overlay
 .humberger__menu__wrapper
   .humberger__menu__logo
-    h1 UFarm Harvest
     | &gt;
   .humberger__menu__widget
     .header__top__right__auth
@@ -31,7 +30,7 @@ head
   nav.humberger__menu__nav.mobile-menu
     ul
       li.active
-        a(href='../') Home
+        a(href='../') Ufarm
       li
         a(href='/user/productsGrid') Shop
       li
@@ -44,7 +43,7 @@ head
           li
             a(href='/checkout') Check Out
       li
-        a(href='./contact.html') Contact
+        a(href='/contact') Contact
   #mobile-menu-wrap
 // Humberger End
 // Header Section Begin
@@ -60,13 +59,12 @@ header.header
   .container
     .row
       .col-lg-3
-        .header__logo
-          h1 UFarm Harvest
+
       .col-lg-6
         nav.header__menu
           ul
             li
-              a(href='../') Home
+              a(href='../') Ufarm
             li.active
               a(href='productsGrid') Shop
             li
@@ -79,7 +77,7 @@ header.header
                 li
                   a(href='checkout') Check Out
             li
-              a(href='./contact.html') Contact
+              a(href='/contact') Contact
     .humberger__open
       i.fa.fa-bars
 // Header Section End
@@ -91,30 +89,14 @@ section.hero.hero-normal
         .hero__categories
           .hero__categories__all
             i.fa.fa-bars
-            span Most trending
+            span Categories 
           ul
             li
-              a(href='#') Fresh Meat
+              a(href='/user/horticulture') Fresh Horticulture produce
             li
-              a(href='#') Vegetables
+              a(href='/user/poultry') Poultry Produce
             li
-              a(href='#') Fruit &amp; Nut Gifts
-            li
-              a(href='#') Fresh Berries
-            li
-              a(href='#') Ocean Foods
-            li
-              a(href='#') Butter &amp; Eggs
-            li
-              a(href='#') Fastfood
-            li
-              a(href='#') Fresh Onion
-            li
-              a(href='#') Papayaya &amp; Crisps
-            li
-              a(href='#') Oatmeal
-            li
-              a(href='#') Fresh Bananas
+              a(href='/user/dairy') Dairy produce
       .col-lg-9
         .hero__search
           .hero__search__form

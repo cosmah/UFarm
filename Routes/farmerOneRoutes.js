@@ -51,7 +51,37 @@ router.get('/farmerOne/urbanFarmers', isAuthenticated,async(req, res) => {
       //res.status(400).render("/")
     }
 });
-
+//DELETE ROUTE
+router.post("/farmerOne/urbanFarmers/delete",async(req,res)=>{
+  try{
+    await Farmers.deleteOne({_id:req.body.id});
+    res.redirect('back')
+  }
+  catch(err){
+    console.log(err)
+  }
+})
+//update data
+router.get("/farmerOne/ufUpdate/:id", async(req,res)=>{
+  try{
+    const item = await Farmers.findOne({_id:req.params.id});
+    res.render("farmerOne/ufUpdate", {urbanFarmer:item});
+  }
+  catch(err){
+    res.render('Record not found');
+    console.log(err)
+  }
+});
+router.post("/farmerOne/ufUpdate", async(req,res)=>{
+  try{
+      await Farmers.findOneAndUpdate({_id:req.query.id},req.body)
+      res.redirect("farmerOne/ufUpdate")
+  }
+  catch(err){
+      res.send("Failed to update farmer details")
+      console.log(err)
+  }
+})
 
 
 router.get('/farmerOne/ufSignUp', isAuthenticated,(req, res) => {

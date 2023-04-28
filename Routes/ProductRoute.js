@@ -14,7 +14,37 @@ router.get('/urbanFarmer/products', async (req, res) => {
     res.send('Failed');
   }
 });
-
+//DELETE ROUTE
+router.post("/urbanFarmer/products/delete",async(req,res)=>{
+  try{
+    await Product.deleteOne({_id:req.body.id});
+    res.redirect('back')
+  }
+  catch(err){
+    console.log(err)
+  }
+})
+//update data
+router.get("/urbanFarmer/upDateProduct/:id", async(req,res)=>{
+  try{
+    const item = await Product.findOne({_id:req.params.id});
+    res.render("urbanFarmer/upDateProduct", {product:item});
+  }
+  catch(err){
+    res.render('Record not found');
+    console.log(err)
+  }
+});
+router.post("/urbanFarmer/upDateProduct", async(req,res)=>{
+  try{
+      await Product.findOneAndUpdate({_id:req.query.id},req.body)
+      res.redirect("products")
+  }
+  catch(err){
+      res.send("Failed to update product")
+      console.log(err)
+  }
+})
 
 
 router.get("/urbanFarmer/products",(req,res)=>{

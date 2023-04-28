@@ -64,7 +64,7 @@ head
         }
 .container
 
-  button.abort-button(onclick="window.location.href = 'ufDash';") Abort
+  button.abort-button(onclick="window.location.href = 'ufDash';") Back 
   fieldset 
     table.table.table-bordered
       thead
@@ -80,12 +80,13 @@ head
           th Directions
           th Delivery
           th Type
+          th Action 
+          th Action 
       tbody
         each product in products
           tr
             td #{product.username}
-            td 
-               a(href='/product/' + product._id) #{product.pname}
+            td #{product.pname}
             td #{product.ward}
             td #{product.date}
             td #{product.expiry}
@@ -95,7 +96,12 @@ head
             td #{product.directions}
             td #{product.delivery}
             td #{product.type}
-
+            td 
+              form(method="post" action="/urbanFarmer/products/delete") 
+                input(type="hidden", name="id", value=product.id)
+                button.btn.btn-danger(type="submit") Delete 
+            td 
+              a.btn.btn-dark.btn-block(href="/urbanFarmer/upDateProduct/"+product.id) Edit 
 
 
 script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')

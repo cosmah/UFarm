@@ -22,26 +22,26 @@ head
     h1 UFarm
   .humberger__menu__widget
     .header__top__right__auth
-      a(href='#')
+      a(href='/login')
         i.fa.fa-user
         |  Login
   nav.humberger__menu__nav.mobile-menu
     ul
       li.active
-        a(href='./index.html') Home
+        a(href='/index') Ufarm 
       li
-        a(href='./shop-grid.html') Shop
+        a(href='/user/productsGrid') Shop
       li
         a(href='#') Pages
         ul.header__menu__dropdown
           li
-            a(href='./shop-details.html') Shop Details
+            a(href='/user/productDetails') Shop Details
           li
-            a(href='./shoping-cart.html') Shoping Cart
+            a(href='/user/cart') Shoping Cart
           li
-            a(href='./checkout.html') Check Out
+            a(href='/user/checkout') Check Out
       li
-        a(href='./contact.html') Contact
+        a(href='/contact') Contact
   #mobile-menu-wrap
 // Humberger End
 // Header Section Begin
@@ -53,32 +53,32 @@ header.header
         .col-lg-6
           .header__top__right
             .header__top__right__auth
-              a(href='#')
+              a(href='/login')
                 i.fa.fa-user
                 |  Login
   .container
     .row
       .col-lg-3
         .header__logo
-          h1 UFarm
+          //- h1 UFarm
       .col-lg-6
         nav.header__menu
           ul
             li
-              a(href='./index.html') Home
+              a(href='/index') Ufarm
             li
-              a(href='./shop-grid.html') Shop
+              a(href='/user/productsGrid') Shop
             li
               a(href='#') Pages
               ul.header__menu__dropdown
                 li
-                  a(href='./shop-details.html') Shop Details
+                  a(href='/user/productDetails') Shop Details
                 li
-                  a(href='./shoping-cart.html') Shoping Cart
+                  a(href='/user/cart') Shoping Cart
                 li
-                  a(href='./checkout.html') Check Out
+                  a(href='/user/checkout') Check Out
             li.active
-              a(href='./contact.html') Contact
+              a(href='/contact') Contact
     .humberger__open
       i.fa.fa-bars
 // Header Section End
@@ -90,30 +90,14 @@ section.hero.hero-normal
         .hero__categories
           .hero__categories__all
             i.fa.fa-bars
-            span All departments
+            span Categories 
           ul
             li
-              a(href='#') Fresh Meat
+              a(href='/user/horticulture') Fresh Horticulture produce
             li
-              a(href='#') Vegetables
+              a(href='/user/poultry') Poultry Produce
             li
-              a(href='#') Fruit &amp; Nut Gifts
-            li
-              a(href='#') Fresh Berries
-            li
-              a(href='#') Ocean Foods
-            li
-              a(href='#') Butter &amp; Eggs
-            li
-              a(href='#') Fastfood
-            li
-              a(href='#') Fresh Onion
-            li
-              a(href='#') Papayaya &amp; Crisps
-            li
-              a(href='#') Oatmeal
-            li
-              a(href='#') Fresh Bananas
+              a(href='/user/dairy') Dairy produce
       .col-lg-9
         .hero__search
           .hero__search__form
@@ -121,7 +105,7 @@ section.hero.hero-normal
               .hero__search__categories
                 | All Categories
                 span.arrow_carrot-down
-              input(type='text' placeholder='What do yo u need?')
+              input(type='text' placeholder='Search product')
               button.site-btn(type='submit') SEARCH
           .hero__search__phone
             .hero__search__phone__icon

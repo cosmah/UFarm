@@ -48,9 +48,6 @@ head
           a.w3-bar-item.w3-button(href='products')
             i.fa.fa-list-alt
             |  Product List
-          a.w3-bar-item.w3-button(href='upDateProduct')
-            i.fa.fa-edit
-            |  Update Product
       .w3-dropdown-hover.w3-hide-small
         button.w3-button
           i.fa.fa-shopping-cart
@@ -103,9 +100,7 @@ head
       a.w3-bar-item.w3-button(href='addProduct')
         i.fa.fa-list-alt
         |  Product List
-      a.w3-bar-item.w3-button(href='upDateProduct')
-        i.fa.fa-edit
-        |  Update Product
+
   .w3-dropdown-hover.w3-padding-large
     button.w3-button
       i.fa.fa-shopping-cart
@@ -144,7 +139,7 @@ head
         .w3-container
           h4.w3-center Farmer&apos;s Profile
           p.w3-center
-            img.w3-circle(src='../assets/farmer.png' style='height: 106px; width: 106px' alt='Avatar')
+            //- img.w3-circle(src='../assets/farmer.png' style='height: 106px; width: 106px' alt='Avatar')
           hr
           p
             i.fa.fa-pencil.fa-fw.w3-margin-right.w3-text-theme
@@ -171,117 +166,8 @@ head
             i.fa.fa-phone.fa-fw.w3-margin-right.w3-text-theme
             |                 Contact
       br
-      // Accordion
-      .w3-card.w3-round
-        .w3-white
-          button.w3-button.w3-block.w3-theme-l1.w3-left-align(onclick="myFunction('Demo1')")
-            i.fa.fa-circle-o-notch.fa-fw.w3-margin-right
-            |  My
-            |                 Groups
-          #Demo1.w3-hide.w3-container
-            p Some text..
-          button.w3-button.w3-block.w3-theme-l1.w3-left-align(onclick="myFunction('Demo2')")
-            i.fa.fa-calendar-check-o.fa-fw.w3-margin-right
-            |  My
-            |                 Events
-          #Demo2.w3-hide.w3-container
-            p Some other text..
-      br
-      // Interests
-      .w3-card.w3-round.w3-white.w3-hide-small
-        .w3-container
-          p Fields Undertaken
-          p
-            span.w3-tag.w3-small.w3-theme-d5 Fresh Hoticulture Produce
-            span.w3-tag.w3-small.w3-theme-d4 Poultry Produce
-            span.w3-tag.w3-small.w3-theme-d3 Dairy Produce
-      br
-      // Alert Box
-      .w3-container.w3-display-container.w3-round.w3-theme-l4.w3-border.w3-theme-border.w3-margin-bottom.w3-hide-small
-        span.w3-button.w3-theme-l3.w3-display-topright(onclick="this.parentElement.style.display='none'")
-          i.fa.fa-remove
-        p
-          strong Hey!
-        p People are looking at your profile. Find out who.
-      // End Left Column
-    // Middle Column
-    .w3-col.m7
-      .w3-row-padding
-        .w3-col.m12
-          .w3-card.w3-round.w3-white
-            .w3-container.w3-padding
-              h6.w3-opacity ANNOUNCE NEW HARVESTS
-              p.w3-border.w3-padding(contenteditable='true')
-                | Status: Feeling Blue
-              button.w3-button.w3-theme(type='button')
-                i.fa.fa-pencil
-                |  &nbsp;Post
-      center
-        h1 NOTIFICATIONS FROM CUSTOMERS
-      .w3-container.w3-card.w3-white.w3-round.w3-margin
-        br
-        img.w3-left.w3-circle.w3-margin-right(src='../assets/farmer.png' alt='Avatar' style='width: 60px')
-        span.w3-right.w3-opacity 1 min
-        h4 John Doe
-        br
-        hr.w3-clear
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          | nisi ut aliquip ex ea commodo consequat.
-        .w3-row-padding(style='margin: 0 -16px')
-          .w3-half
-            img.w3-margin-bottom(src='/w3images/lights.jpg' style='width: 100%' alt='Northern Lights')
-          .w3-half
-            img.w3-margin-bottom(src='/w3images/nature.jpg' style='width: 100%' alt='Nature')
-        button.w3-button.w3-theme-d1.w3-margin-bottom(type='button')
-          i.fa.fa-thumbs-up
-          |  &nbsp;Like
-        button.w3-button.w3-theme-d2.w3-margin-bottom(type='button')
-          i.fa.fa-comment
-          |  &nbsp;Comment
-      .w3-container.w3-card.w3-white.w3-round.w3-margin
-        br
-        img.w3-left.w3-circle.w3-margin-right(src='/w3images/avatar5.png' alt='Avatar' style='width: 60px')
-        span.w3-right.w3-opacity 16 min
-        h4 Jane Doe
-        br
-        hr.w3-clear
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          | eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-          | enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          | nisi ut aliquip ex ea commodo consequat.
-        button.w3-button.w3-theme-d1.w3-margin-bottom(type='button')
-          i.fa.fa-thumbs-up
-          |  &nbsp;Like
-        button.w3-button.w3-theme-d2.w3-margin-bottom(type='button')
-          i.fa.fa-comment
-          |  &nbsp;Comment
-      // End Middle Column
-    // Right Column
-    .w3-col.m2
-      .w3-card.w3-round.w3-white.w3-center
-        .w3-container
-          p Upcoming Events:
-          img(src='../assets/todo.png' alt='Forest' style='width: 100%')
-          p
-            strong Holiday
-          p Friday 15:00
-          p
-            button.w3-button.w3-block.w3-theme-l4 Info
-      br
-      .w3-card.w3-round.w3-white.w3-padding-16.w3-center
-        a(href='add_products.html') Upload ADS
-      br
-      .w3-card.w3-round.w3-white.w3-padding-32.w3-center
-        p
-          i.fa.fa-bug.w3-xxlarge CONTACT FARMER ONE
-      // End Right Column
-    // End Grid
-  // End Page Container
-br
+  
+        
 // Footer
 footer.w3-container.w3-theme-d3.w3-padding-16
   h5

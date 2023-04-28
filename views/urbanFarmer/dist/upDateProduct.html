@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Update Form</title>
+  <title>Product Upload Form</title>
   <!-- Bootstrap CSS-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
   <!-- Custom CSS-->
@@ -77,34 +77,28 @@
     }
   </style>
 </head>
-<button class="abort-button" onclick="window.location.href = 'ufDash';">Abort</button>
+<button class="abort-button" onclick="window.location.href = 'ufDash';">Back </button>
 <div class="container">
   <center>
-    <h1 class="text-center mb-4">Product Update Form</h1>
-    <form>
+    <h1 class="text-center mb-4">Product Upload Form</h1>
+    <form id="farmers" name="registration" action="/urbanFarmer/addProduct" method="post">
       <div class="row">
         <div class="col-md-6">
           <div class="form-group">
-            <label for="product-images">Product Images (minimum of 3)</label>
-            <input class="form-control" id="product-images" type="file" name="product-images[]" accept="image/*" multiple="" required=""><small class="form-text text-muted">Maximum file size: 5MB per image</small>
+            <label for="username">Unique No.</label>
+            <input class="form-control" id="pname" type="text" placeholder="Enter unique number" name="username" required="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="username">Unique No </label>
-            <input class="form-control" id="product-name" type="text" placeholder="Enter product name" required="">
+            <label for="pname">Product Name</label>
+            <input class="form-control" id="pname" type="text" placeholder="Enter product name" name="pname" required="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="product-name">Product Name</label>
-            <input class="form-control" id="product-name" type="text" placeholder="Enter product name" required="">
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="ward-name">Ward Name</label>
-            <input class="form-control" id="ward-name" type="text" placeholder="Enter ward name" readonly="">
+            <label for="ward">Ward Name</label>
+            <input class="form-control" id="ward" type="text" placeholder="Enter ward name" name="ward" required="">
           </div>
         </div>
       </div>
@@ -112,19 +106,19 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="date">Date of Adding</label>
-            <input class="form-control" id="date" type="date" readonly="">
+            <input class="form-control" id="date" type="date" name="date" required="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="date">Best Before</label>
-            <input class="form-control" id="date" type="date" required="">
+            <label for="expiry">Best Before</label>
+            <input class="form-control" id="expiry" type="date" name="expiry" required="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="unit-price">Unit Price (in Ugx)</label>
-            <input class="form-control" id="unit-price" type="number" placeholder="Enter unit price" required="">
+            <label for="price">Unit Price (in Ugx)</label>
+            <input class="form-control" id="price" type="number" placeholder="Enter unit price" name="price" required="">
           </div>
         </div>
       </div>
@@ -132,19 +126,13 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="quantity">Quantity</label>
-            <input class="form-control" id="quantity" type="number" placeholder="Enter quantity" required="">
+            <input class="form-control" id="quantity" type="number" placeholder="Enter quantity" name="quantity" required="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="mode-of-payment">Mode of Payment</label>
-            <select class="form-control" id="mode-of-payment" required="">
-              <option value="">Select mode of payment</option>
-              <option value="Cash">Cash</option>
-              <option value="Mobile Money">Mobile Money</option>
-              <option value="Bank Transfer">Bank Transfer</option>
-              <option value="Other">Other</option>
-            </select>
+            <label for="payment">Mode of Payment</label>
+            <input class="form-control" id="ward" type="text" placeholder="Enter ward name" name="payment" required="">
           </div>
         </div>
       </div>
@@ -152,28 +140,19 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="directions">Directions</label>
-            <input class="form-control" id="produce-type" type="text" placeholder="Enter directions" required="">
+            <input class="form-control" id="produce-type" type="text" placeholder="Enter directions" name="directions" required="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="mode-of-delivery">Mode of Delivery</label>
-            <select class="form-control" id="mode-of-delivery" required="">
-              <option value="">Select mode of delivery</option>
-              <option value="Pickup">Pickup</option>
-              <option value="Delivery">Delivery</option>
-            </select>
+            <label for="delivery">Mode of Delivery</label>
+            <input class="form-control" id="ward" type="text" placeholder="Enter ward name" name="delivery" required="">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <label for="produce-type">Produce Type</label>
-            <select class="form-control" id="produce-type" required="">
-              <option value="">Select Produce Type</option>
-              <option value="Fresh Horticulture produce">Fresh Horticulture produce</option>
-              <option value="Poultry products">Poultry products</option>
-              <option value="Dairy products">Dairy products</option>
-            </select>
+            <label for="type">Produce Type</label>
+            <input class="form-control" id="ward" type="text" placeholder="Enter ward name" name="type" required="">
           </div>
           <button class="btn btn-primary" type="submit">Submit</button>
         </div>

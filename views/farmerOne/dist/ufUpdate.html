@@ -43,7 +43,7 @@
         <label class="col-md-4 control-label">Date of Birth</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <input class="form-control" name="dob" type="date">
+            <input class="form-control" name="dob">
           </div>
         </div>
       </div>
@@ -51,11 +51,7 @@
         <label class="col-md-4 control-label">Gender</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-            <select class="form-select" id="batteryprice" type="text" name="gender">
-              <option value="Default" selected="">Select</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
+            <input class="form-control" name="gender" type="text">
           </div>
         </div>
       </div>
@@ -103,38 +99,19 @@
         <label class="col-md-4 control-label">Ward</label>
         <div class="col-md-4 inputGroupContainer">
           <div class="input-group"><span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-            <select class="form-select" id="batteryprice" type="text" name="ward">
-              <option value="Default" selected="">Select</option>
-              <option value="1">Ward 1</option>
-              <option value="2">Ward 2</option>
-              <option value="3">Ward 3</option>
-            </select>
+            <input class="form-control" name="ward" type="text">
           </div>
         </div>
       </div>
       <div class="form-group">
-        <label for="residence">Residence Type:</label>
-        <select class="form-control" id="residence" name="residence">
-          <option value="Default" selected="">Select</option>
-          <option value="Owned">Owned</option>
-          <option value="Rented">Rented</option>
-          <option value="Other">Other</option>
-        </select>
+        <label for="residence">Residence Type:
+          <input class="form-control" name="residence" type="text">
+        </label>
       </div>
       <div class="form-group">
-        <label for="activities">Activities Engaged:</label>
-        <div>
-          <input id="horticulture" type="checkbox" name="activities" value="Horticulture">
-          <label for="horticulture">Horticulture</label>
-        </div>
-        <div>
-          <input id="poultry" type="checkbox" name="activities" value="Poultry">
-          <label for="poultry">Poultry</label>
-        </div>
-        <div>
-          <input id="dairy" type="checkbox" name="activities" value="Dairy">
-          <label for="dairy">Dairy</label>
-        </div>
+        <label for="activities">Activities Engaged:
+          <input class="form-control" name="activities" type="text">
+        </label>
       </div>
       <!-- Select Basic-->
       <!-- Success message-->
@@ -143,7 +120,7 @@
       <div class="form-group">
         <label class="col-md-4 control-label"></label>
         <div class="col-md-4"><br>
-          <button class="btn btn-warning" type="submit">SUBMIT</button>
+          <button class="btn btn-warning" type="submit">EDIT </button>
         </div>
       </div>
     </fieldset>

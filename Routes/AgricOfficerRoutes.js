@@ -58,18 +58,27 @@ router.post('/aofficer/FoReg', async(req, res) => {
 });
 
 //fetch the data
-router.get("/aofficer/farmerOnes", isAuthenticated,async(req,res)=>{
-  try{
-    let items = await FarmerOne.find();
-    console.log(items)
-    res.render("aofficer/farmerOnes",{farmerones:items})
-  }
-  catch(err){
-    console.log(err)
-    res.send('Failed')
+// router.get("/aofficer/farmerOnes", isAuthenticated,async(req,res)=>{
+//   try{
+//     let items = await FarmerOne.find();
+//     console.log(items)
+//     res.render("aofficer/farmerOnes",{farmerones:items})
+//   }
+//   catch(err){
+//     console.log(err)
+//     res.send('Failed')
+//   }
+// });
+
+router.get("/aofficer/farmerOnes", isAuthenticated,async (req, res) => {
+  try {
+    const items = await FarmerOne.find();
+    res.render('/aofficer/farmerOnes', { farmerones: items });
+  } catch (err) {
+    console.log(err);
+    res.send('Failed');
   }
 });
-
 
 
 module.exports = router;

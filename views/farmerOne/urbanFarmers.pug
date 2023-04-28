@@ -34,7 +34,7 @@ head
     border-bottom-width: 2px;
     }
 .container
-  h1 REGISTRED FARMERS LIST
+  h1 REGISTERED  FARMERS LIST
   table.table.table-bordered
     thead
       tr
@@ -47,7 +47,8 @@ head
         th(scope='col') Address 
         th(scope='col') Ward
         th(scope='col') Activities
-        //- th(scope='col') Action
+        th(scope='col') Action
+        th(scope='col') Action
     tbody
     tbody
       if urbanFarmers.length 
@@ -62,12 +63,12 @@ head
             td #{urbanFarmer.address}
             td #{urbanFarmer.ward}
             td #{urbanFarmer.activities}
-            //- td 
-            //-   form(method="post", action="/urbanFarmers/delete")
-            //-     input(type="hidden", name="id", value=farmer.id)
-            //-     button.btn.btn-danger(type="submit") Delete   
-            //- td 
-            //-   //- a.btn.btn-dark.btn-block(href="/farmer/Edit/"+farmer.id) Edit      
+            td 
+              form(method="post" action="/farmerOne/urbanFarmers/delete") 
+                input(type="hidden", name="id", value=urbanFarmer.id)
+                button.btn.btn-danger(type="submit") Delete
+            td 
+              a.btn.btn-dark.btn-block(href="/farmerOne/ufUpdate/"+urbanFarmer.id) Edit        
       else 
         p There are no Farmers in the database
 

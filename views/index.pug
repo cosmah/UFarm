@@ -19,8 +19,7 @@ head
 // Humberger Begin
 .humberger__menu__overlay
 .humberger__menu__wrapper
-  .humberger__menu__logo
-    h1 Ufarm
+
   .humberger__menu__widget
     .header__top__right__auth
       a(href='login')
@@ -29,7 +28,7 @@ head
   nav.humberger__menu__nav.mobile-menu
     ul
       li.active
-        a(href='/') Home
+        a(href='/') Ufarm 
       li
         a(href='/user/productsGrid') Shop
       //- li
@@ -42,7 +41,7 @@ head
       //-     li
       //-       a(href='./checkout.html') Check Out
       li
-        a(href='./contact.html') Contact
+        a(href='/contact') Contact
   #mobile-menu-wrap
   .header__top__right__social
     a(href='#')
@@ -73,16 +72,16 @@ header.header
         nav.header__menu
           ul
             li.active
-              a(href='/') Home
+              a(href='/') Ufarm 
             li
               a(href='/user/productsGrid') Shop
             li
-              a(href='./contact.html') Contact
+              a(href='/contact') Contact
       .col-lg-3
     .humberger__open
       i.fa.fa-bars
 // Header Section End
-h1 Welcome to UFarm
+//- h1 Welcome to UFarm
 // Hero Section Begin
 section.hero
   .container
@@ -91,30 +90,16 @@ section.hero
         .hero__categories
           .hero__categories__all
             i.fa.fa-bars
-            span All departments
+            span Categories 
           ul
             li
-              a(href='#') Fresh Meat
+              a(href='/user/horticulture') Fresh Horticulture produce
             li
-              a(href='#') Vegetables
+              a(href='/user/poultry') Poultry Produce
             li
-              a(href='#') Fruit &amp; Nut Gifts
-            li
-              a(href='#') Fresh Berries
-            li
-              a(href='#') Ocean Foods
-            li
-              a(href='#') Butter &amp; Eggs
-            li
-              a(href='#') Fastfood
-            li
-              a(href='#') Fresh Onion
-            li
-              a(href='#') Papayaya &amp; Crisps
-            li
-              a(href='#') Oatmeal
-            li
-              a(href='#') Fresh Bananas
+              a(href='/user/dairy') Dairy produce
+
+
       .col-lg-9
         .hero__search
           .hero__search__form
@@ -122,7 +107,7 @@ section.hero
               .hero__search__categories
                 | All Categories
                 span.arrow_carrot-down
-              input(type='text' placeholder='What do yo u need?')
+              input(type='text' placeholder='Search product')
               button.site-btn(type='submit') SEARCH
           .hero__search__phone
             .hero__search__phone__icon
@@ -329,137 +314,6 @@ section.featured.spad
         .banner__pic
           img(src='./landing/img/banner/banner-2.jpg' alt='')
 // Banner End
-// Latest Product Section Begin
-section.latest-product.spad
-  .container
-    .row
-      .col-lg-4.col-md-6
-        .latest-product__text
-          h4 Latest Products
-          .latest-product__slider.owl-carousel
-            .latest-prdouct__slider__item
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-            .latest-prdouct__slider__item
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-      .col-lg-4.col-md-6
-        .latest-product__text
-          h4 Top Rated Products
-          .latest-product__slider.owl-carousel
-            .latest-prdouct__slider__item
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-            .latest-prdouct__slider__item
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-      .col-lg-4.col-md-6
-        .latest-product__text
-          h4 Review Products
-          .latest-product__slider.owl-carousel
-            .latest-prdouct__slider__item
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-            .latest-prdouct__slider__item
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-1.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-2.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-              a.latest-product__item(href='#')
-                .latest-product__item__pic
-                  img(src='./landing/img/latest-product/lp-3.jpg' alt='')
-                .latest-product__item__text
-                  h6 Product Name
-                  span Ugx.15000
-// Latest Product Section End
 // Footer Section Begin
 footer.footer.spad
   .container

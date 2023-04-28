@@ -74,6 +74,17 @@ router.post('/aofficer/FoReg', function _callee(req, res) {
     }
   }, null, null, [[0, 8]]);
 }); //fetch the data
+// router.get("/aofficer/farmerOnes", isAuthenticated,async(req,res)=>{
+//   try{
+//     let items = await FarmerOne.find();
+//     console.log(items)
+//     res.render("aofficer/farmerOnes",{farmerones:items})
+//   }
+//   catch(err){
+//     console.log(err)
+//     res.send('Failed')
+//   }
+// });
 
 router.get("/aofficer/farmerOnes", isAuthenticated, function _callee2(req, res) {
   var items;
@@ -87,24 +98,23 @@ router.get("/aofficer/farmerOnes", isAuthenticated, function _callee2(req, res) 
 
         case 3:
           items = _context2.sent;
-          console.log(items);
-          res.render("aofficer/farmerOnes", {
+          res.render('/aofficer/farmerOnes', {
             farmerones: items
           });
-          _context2.next = 12;
+          _context2.next = 11;
           break;
 
-        case 8:
-          _context2.prev = 8;
+        case 7:
+          _context2.prev = 7;
           _context2.t0 = _context2["catch"](0);
           console.log(_context2.t0);
           res.send('Failed');
 
-        case 12:
+        case 11:
         case "end":
           return _context2.stop();
       }
     }
-  }, null, null, [[0, 8]]);
+  }, null, null, [[0, 7]]);
 });
 module.exports = router;
